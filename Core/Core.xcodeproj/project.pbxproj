@@ -11,6 +11,9 @@
 		2C4F24702CDFD45B0046AA5F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4F24652CDFD45A0046AA5F /* Core.framework */; };
 		2C4F24752CDFD45B0046AA5F /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F24742CDFD45B0046AA5F /* CoreTests.swift */; };
 		2C4F24762CDFD45B0046AA5F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4F24682CDFD45A0046AA5F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C525B8B2CE6989800A0B14C /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B8A2CE6989800A0B14C /* Example.swift */; };
+		2C525B8F2CE69C6700A0B14C /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */; };
+		2C525B922CE69CAE00A0B14C /* PlantlyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		2C4F24692CDFD45A0046AA5F /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
 		2C4F246F2CDFD45B0046AA5F /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4F24742CDFD45B0046AA5F /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		2C525B8A2CE6989800A0B14C /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,8 @@
 		2C4F24672CDFD45A0046AA5F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2C525B932CE69DDE00A0B14C /* Logging */,
+				2C4F24992CDFD7F00046AA5F /* DI */,
 				2C4F24822CDFD60A0046AA5F /* Storage */,
 				2C4F24812CDFD5F40046AA5F /* FeatureManagering */,
 				2C4F247F2CDFD5060046AA5F /* Networking */,
@@ -91,6 +99,9 @@
 		2C4F247F2CDFD5060046AA5F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2C525B8D2CE69C4900A0B14C /* ApiSpecific */,
+				2C525B8C2CE69C4200A0B14C /* Basic */,
+				2C525B8A2CE6989800A0B14C /* Example.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -107,6 +118,44 @@
 			children = (
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		2C4F24992CDFD7F00046AA5F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		2C525B8C2CE69C4200A0B14C /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		2C525B8D2CE69C4900A0B14C /* ApiSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				2C525B902CE69C8000A0B14C /* PlantlyAPI */,
+			);
+			path = ApiSpecific;
+			sourceTree = "<group>";
+		};
+		2C525B902CE69C8000A0B14C /* PlantlyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */,
+			);
+			path = PlantlyAPI;
+			sourceTree = "<group>";
+		};
+		2C525B932CE69DDE00A0B14C /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C525B8F2CE69C6700A0B14C /* NetworkingService.swift in Sources */,
+				2C525B922CE69CAE00A0B14C /* PlantlyAPI.swift in Sources */,
 				2C4F246A2CDFD45A0046AA5F /* Core.docc in Sources */,
+				2C525B8B2CE6989800A0B14C /* Example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +483,7 @@
 		2C4F247D2CDFD45B0046AA5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35953V9L7K;
@@ -447,6 +500,7 @@
 		2C4F247E2CDFD45B0046AA5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35953V9L7K;
