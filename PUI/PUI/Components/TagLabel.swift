@@ -13,7 +13,7 @@ public extension PUI {
         
         public var body: some View {
             Label(
-                title: { Text(label) },
+                title: { Text(label).bold() },
                 icon: { icon }
             )
         }
