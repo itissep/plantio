@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C504A902D29511600F25A84 /* PlantClassifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C504A8F2D29511600F25A84 /* PlantClassifier.framework */; };
+		2C504A912D29511600F25A84 /* PlantClassifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C504A8F2D29511600F25A84 /* PlantClassifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CBAF2672CD2FF31002A8AB2 /* PlantlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2662CD2FF31002A8AB2 /* PlantlyApp.swift */; };
 		2CBAF2692CD2FF31002A8AB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2682CD2FF31002A8AB2 /* ContentView.swift */; };
 		2CBAF26B2CD2FF31002A8AB2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF26A2CD2FF31002A8AB2 /* Item.swift */; };
@@ -34,7 +36,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2C504A922D29511700F25A84 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C504A912D29511600F25A84 /* PlantClassifier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2C504A8D2D29510500F25A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2C504A8F2D29511600F25A84 /* PlantClassifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PlantClassifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBAF2632CD2FF31002A8AB2 /* Plantly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBAF2662CD2FF31002A8AB2 /* PlantlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyApp.swift; sourceTree = "<group>"; };
 		2CBAF2682CD2FF31002A8AB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C504A902D29511600F25A84 /* PlantClassifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C504A8E2D29511600F25A84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C504A8F2D29511600F25A84 /* PlantClassifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2CBAF25A2CD2FF31002A8AB2 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +107,7 @@
 				2CBAF2782CD2FF32002A8AB2 /* PlantlyTests */,
 				2CBAF2822CD2FF32002A8AB2 /* PlantlyUITests */,
 				2CBAF2642CD2FF31002A8AB2 /* Products */,
+				2C504A8E2D29511600F25A84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +124,7 @@
 		2CBAF2652CD2FF31002A8AB2 /* Plantly */ = {
 			isa = PBXGroup;
 			children = (
+				2C504A8D2D29510500F25A84 /* Info.plist */,
 				2CBAF2662CD2FF31002A8AB2 /* PlantlyApp.swift */,
 				2CBAF2682CD2FF31002A8AB2 /* ContentView.swift */,
 				2CBAF26A2CD2FF31002A8AB2 /* Item.swift */,
@@ -140,6 +169,7 @@
 				2CBAF25F2CD2FF31002A8AB2 /* Sources */,
 				2CBAF2602CD2FF31002A8AB2 /* Frameworks */,
 				2CBAF2612CD2FF31002A8AB2 /* Resources */,
+				2C504A922D29511700F25A84 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,6 +459,7 @@
 				DEVELOPMENT_TEAM = 35953V9L7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Plantly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +489,7 @@
 				DEVELOPMENT_TEAM = 35953V9L7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Plantly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
