@@ -2,10 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Models/Models.xcodeproj">
+      location = "group:PUI/PUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UI/UI.xcodeproj">
+      location = "group:PlantClassifier/PlantClassifier.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Models/Models.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Core/Core.xcodeproj">
