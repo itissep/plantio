@@ -36,7 +36,7 @@ public struct PlantClassifierView: View {
                     photoLibrary: .shared()) {
                         Text("Загрузить видео из галлереи")
                     }
-                    .onChange(of: selectedItem) { newItem in
+                    .onChange(of: selectedItem) { newItem, _ in
                         Task {
                             if let data = try? await newItem?.loadTransferable(type: Data.self) {
                                 viewModel.selectedImage = UIImage(data: data)
