@@ -10,13 +10,57 @@
 		2C91CF512D3405DB008D1376 /* PUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C91CF502D3405DB008D1376 /* PUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C91CF582D3405EC008D1376 /* PUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF572D3405EC008D1376 /* PUI.swift */; };
 		2C91CF5B2D340661008D1376 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF5A2D340661008D1376 /* TagLabel.swift */; };
+		2C91CF632D340AD7008D1376 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF622D340AD7008D1376 /* Colors.swift */; };
+		2C91CF6F2D340F54008D1376 /* Color+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF6E2D340F54008D1376 /* Color+HEX.swift */; };
+		2C91CF712D3410DD008D1376 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF702D3410DD008D1376 /* Font.swift */; };
+		2C91CF792D3411BF008D1376 /* PUIDemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF782D3411BF008D1376 /* PUIDemoAppApp.swift */; };
+		2C91CF7B2D3411BF008D1376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF7A2D3411BF008D1376 /* ContentView.swift */; };
+		2C91CF7F2D3411C1008D1376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C91CF7E2D3411C1008D1376 /* Assets.xcassets */; };
+		2C91CF882D34122E008D1376 /* PUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CF4D2D3405DB008D1376 /* PUI.framework */; };
+		2C91CF892D34122E008D1376 /* PUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CF4D2D3405DB008D1376 /* PUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C91CF912D3416A0008D1376 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF902D3416A0008D1376 /* Constants.swift */; };
+		2C91CF932D3416E9008D1376 /* Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF922D3416E9008D1376 /* Spacings.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C91CF8A2D34122E008D1376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C91CF442D3405DB008D1376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C91CF4C2D3405DB008D1376;
+			remoteInfo = PUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C91CF8C2D34122E008D1376 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C91CF892D34122E008D1376 /* PUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C91CF4D2D3405DB008D1376 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C91CF502D3405DB008D1376 /* PUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PUI.h; sourceTree = "<group>"; };
 		2C91CF572D3405EC008D1376 /* PUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUI.swift; sourceTree = "<group>"; };
 		2C91CF5A2D340661008D1376 /* TagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
+		2C91CF622D340AD7008D1376 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2C91CF6E2D340F54008D1376 /* Color+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+HEX.swift"; sourceTree = "<group>"; };
+		2C91CF702D3410DD008D1376 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		2C91CF762D3411BF008D1376 /* PUIDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PUIDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C91CF782D3411BF008D1376 /* PUIDemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUIDemoAppApp.swift; sourceTree = "<group>"; };
+		2C91CF7A2D3411BF008D1376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C91CF7E2D3411C1008D1376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C91CF862D341226008D1376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2C91CF902D3416A0008D1376 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C91CF922D3416E9008D1376 /* Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +71,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C91CF732D3411BF008D1376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C91CF882D34122E008D1376 /* PUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -34,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				2C91CF4F2D3405DB008D1376 /* PUI */,
+				2C91CF772D3411BF008D1376 /* PUIDemoApp */,
 				2C91CF4E2D3405DB008D1376 /* Products */,
+				2C91CF872D34122E008D1376 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -42,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2C91CF4D2D3405DB008D1376 /* PUI.framework */,
+				2C91CF762D3411BF008D1376 /* PUIDemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -49,9 +104,14 @@
 		2C91CF4F2D3405DB008D1376 /* PUI */ = {
 			isa = PBXGroup;
 			children = (
+				2C91CF6D2D340F42008D1376 /* Helpers */,
 				2C91CF592D340606008D1376 /* Components */,
 				2C91CF502D3405DB008D1376 /* PUI.h */,
 				2C91CF572D3405EC008D1376 /* PUI.swift */,
+				2C91CF622D340AD7008D1376 /* Colors.swift */,
+				2C91CF902D3416A0008D1376 /* Constants.swift */,
+				2C91CF922D3416E9008D1376 /* Spacings.swift */,
+				2C91CF702D3410DD008D1376 /* Font.swift */,
 			);
 			path = PUI;
 			sourceTree = "<group>";
@@ -62,6 +122,32 @@
 				2C91CF5A2D340661008D1376 /* TagLabel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2C91CF6D2D340F42008D1376 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C91CF6E2D340F54008D1376 /* Color+HEX.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2C91CF772D3411BF008D1376 /* PUIDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				2C91CF862D341226008D1376 /* Info.plist */,
+				2C91CF782D3411BF008D1376 /* PUIDemoAppApp.swift */,
+				2C91CF7A2D3411BF008D1376 /* ContentView.swift */,
+				2C91CF7E2D3411C1008D1376 /* Assets.xcassets */,
+			);
+			path = PUIDemoApp;
+			sourceTree = "<group>";
+		};
+		2C91CF872D34122E008D1376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +182,25 @@
 			productReference = 2C91CF4D2D3405DB008D1376 /* PUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		2C91CF752D3411BF008D1376 /* PUIDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C91CF832D3411C1008D1376 /* Build configuration list for PBXNativeTarget "PUIDemoApp" */;
+			buildPhases = (
+				2C91CF722D3411BF008D1376 /* Sources */,
+				2C91CF732D3411BF008D1376 /* Frameworks */,
+				2C91CF742D3411BF008D1376 /* Resources */,
+				2C91CF8C2D34122E008D1376 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C91CF8B2D34122E008D1376 /* PBXTargetDependency */,
+			);
+			name = PUIDemoApp;
+			productName = PUIDemoApp;
+			productReference = 2C91CF762D3411BF008D1376 /* PUIDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -103,11 +208,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					2C91CF4C2D3405DB008D1376 = {
 						CreatedOnToolsVersion = 15.0.1;
 						LastSwiftMigration = 1500;
+					};
+					2C91CF752D3411BF008D1376 = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
@@ -125,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				2C91CF4C2D3405DB008D1376 /* PUI */,
+				2C91CF752D3411BF008D1376 /* PUIDemoApp */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +247,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C91CF742D3411BF008D1376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C91CF7F2D3411C1008D1376 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -145,11 +263,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C91CF582D3405EC008D1376 /* PUI.swift in Sources */,
+				2C91CF6F2D340F54008D1376 /* Color+HEX.swift in Sources */,
+				2C91CF712D3410DD008D1376 /* Font.swift in Sources */,
+				2C91CF632D340AD7008D1376 /* Colors.swift in Sources */,
 				2C91CF5B2D340661008D1376 /* TagLabel.swift in Sources */,
+				2C91CF912D3416A0008D1376 /* Constants.swift in Sources */,
+				2C91CF932D3416E9008D1376 /* Spacings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C91CF722D3411BF008D1376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C91CF7B2D3411BF008D1376 /* ContentView.swift in Sources */,
+				2C91CF792D3411BF008D1376 /* PUIDemoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C91CF8B2D34122E008D1376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C91CF4C2D3405DB008D1376 /* PUI */;
+			targetProxy = 2C91CF8A2D34122E008D1376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C91CF522D3405DB008D1376 /* Debug */ = {
@@ -347,6 +487,69 @@
 			};
 			name = Release;
 		};
+		2C91CF842D3411C1008D1376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35953V9L7K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PUIDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gui.PUIDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C91CF852D3411C1008D1376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35953V9L7K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PUIDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gui.PUIDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -364,6 +567,15 @@
 			buildConfigurations = (
 				2C91CF552D3405DB008D1376 /* Debug */,
 				2C91CF562D3405DB008D1376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C91CF832D3411C1008D1376 /* Build configuration list for PBXNativeTarget "PUIDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C91CF842D3411C1008D1376 /* Debug */,
+				2C91CF852D3411C1008D1376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
