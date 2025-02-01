@@ -1,19 +1,17 @@
 import Foundation
 
-public struct Plant: PlantlyModel {
+public struct Shelf: PlantlyModel {
     public let id: String
     let name: String
-    let mainImageUrl: String?
     let createdDate: Date
-    let plantDate: Date?
     let description: String?
+    let plants: [Plant]
     
-    public init() {
+    public init(plants: [Plant]) {
         self.id = UUID().uuidString
         self.name = "name"
-        self.mainImageUrl = nil
         self.createdDate = .now
-        self.plantDate = .now
         self.description = "description"
+        self.plants = plants
     }
 }
