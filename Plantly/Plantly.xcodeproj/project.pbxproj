@@ -9,34 +9,21 @@
 /* Begin PBXBuildFile section */
 		2C504A902D29511600F25A84 /* PlantClassifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C504A8F2D29511600F25A84 /* PlantClassifier.framework */; };
 		2C504A912D29511600F25A84 /* PlantClassifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C504A8F2D29511600F25A84 /* PlantClassifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C5520802D4E82E100DA2F35 /* AuthModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C55207F2D4E82E100DA2F35 /* AuthModule.framework */; };
+		2C5520812D4E82E100DA2F35 /* AuthModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C55207F2D4E82E100DA2F35 /* AuthModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C5520832D4E84BB00DA2F35 /* ProfileModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5520822D4E84BB00DA2F35 /* ProfileModule.framework */; };
+		2C5520842D4E84BB00DA2F35 /* ProfileModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5520822D4E84BB00DA2F35 /* ProfileModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C91CF602D340795008D1376 /* PUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CF5F2D340795008D1376 /* PUI.framework */; };
 		2C91CF612D340795008D1376 /* PUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CF5F2D340795008D1376 /* PUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C91CFAC2D345094008D1376 /* PlantsShelfModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CFAB2D345094008D1376 /* PlantsShelfModule.framework */; };
+		2C91CFAD2D345094008D1376 /* PlantsShelfModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CFAB2D345094008D1376 /* PlantsShelfModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C91CFB72D345665008D1376 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C91CFB62D345665008D1376 /* GoogleService-Info.plist */; };
+		2C91CFDD2D359460008D1376 /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CFDC2D359460008D1376 /* AppCoordinatorView.swift */; };
+		2C91CFE02D3594E1008D1376 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CFDF2D3594E1008D1376 /* AppCoordinator.swift */; };
 		2CBAF2672CD2FF31002A8AB2 /* PlantlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2662CD2FF31002A8AB2 /* PlantlyApp.swift */; };
-		2CBAF2692CD2FF31002A8AB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2682CD2FF31002A8AB2 /* ContentView.swift */; };
-		2CBAF26B2CD2FF31002A8AB2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF26A2CD2FF31002A8AB2 /* Item.swift */; };
 		2CBAF26D2CD2FF32002A8AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBAF26C2CD2FF32002A8AB2 /* Assets.xcassets */; };
 		2CBAF2702CD2FF32002A8AB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBAF26F2CD2FF32002A8AB2 /* Preview Assets.xcassets */; };
-		2CBAF27A2CD2FF32002A8AB2 /* PlantlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2792CD2FF32002A8AB2 /* PlantlyTests.swift */; };
-		2CBAF2842CD2FF32002A8AB2 /* PlantlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2832CD2FF32002A8AB2 /* PlantlyUITests.swift */; };
-		2CBAF2862CD2FF32002A8AB2 /* PlantlyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAF2852CD2FF32002A8AB2 /* PlantlyUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2CBAF2762CD2FF32002A8AB2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CBAF25B2CD2FF31002A8AB2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CBAF2622CD2FF31002A8AB2;
-			remoteInfo = Plantly;
-		};
-		2CBAF2802CD2FF32002A8AB2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CBAF25B2CD2FF31002A8AB2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CBAF2622CD2FF31002A8AB2;
-			remoteInfo = Plantly;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2C504A922D29511700F25A84 /* Embed Frameworks */ = {
@@ -45,7 +32,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2C5520812D4E82E100DA2F35 /* AuthModule.framework in Embed Frameworks */,
 				2C504A912D29511600F25A84 /* PlantClassifier.framework in Embed Frameworks */,
+				2C5520842D4E84BB00DA2F35 /* ProfileModule.framework in Embed Frameworks */,
+				2C91CFAD2D345094008D1376 /* PlantsShelfModule.framework in Embed Frameworks */,
 				2C91CF612D340795008D1376 /* PUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -56,19 +46,18 @@
 /* Begin PBXFileReference section */
 		2C504A8D2D29510500F25A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2C504A8F2D29511600F25A84 /* PlantClassifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PlantClassifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C55207F2D4E82E100DA2F35 /* AuthModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C5520822D4E84BB00DA2F35 /* ProfileModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProfileModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C91CF5C2D34071C008D1376 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C91CF5F2D340795008D1376 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C91CFAB2D345094008D1376 /* PlantsShelfModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PlantsShelfModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C91CFB62D345665008D1376 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C91CFDC2D359460008D1376 /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		2C91CFDF2D3594E1008D1376 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2CBAF2632CD2FF31002A8AB2 /* Plantly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBAF2662CD2FF31002A8AB2 /* PlantlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyApp.swift; sourceTree = "<group>"; };
-		2CBAF2682CD2FF31002A8AB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2CBAF26A2CD2FF31002A8AB2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2CBAF26C2CD2FF32002A8AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CBAF26F2CD2FF32002A8AB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2CBAF2752CD2FF32002A8AB2 /* PlantlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CBAF2792CD2FF32002A8AB2 /* PlantlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyTests.swift; sourceTree = "<group>"; };
-		2CBAF27F2CD2FF32002A8AB2 /* PlantlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CBAF2832CD2FF32002A8AB2 /* PlantlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyUITests.swift; sourceTree = "<group>"; };
-		2CBAF2852CD2FF32002A8AB2 /* PlantlyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,22 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5520802D4E82E100DA2F35 /* AuthModule.framework in Frameworks */,
 				2C504A902D29511600F25A84 /* PlantClassifier.framework in Frameworks */,
+				2C5520832D4E84BB00DA2F35 /* ProfileModule.framework in Frameworks */,
+				2C91CFAC2D345094008D1376 /* PlantsShelfModule.framework in Frameworks */,
 				2C91CF602D340795008D1376 /* PUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CBAF2722CD2FF32002A8AB2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CBAF27C2CD2FF32002A8AB2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +79,9 @@
 		2C504A8E2D29511600F25A84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C5520822D4E84BB00DA2F35 /* ProfileModule.framework */,
+				2C55207F2D4E82E100DA2F35 /* AuthModule.framework */,
+				2C91CFAB2D345094008D1376 /* PlantsShelfModule.framework */,
 				2C91CF5F2D340795008D1376 /* PUI.framework */,
 				2C91CF5C2D34071C008D1376 /* PUI.framework */,
 				2C504A8F2D29511600F25A84 /* PlantClassifier.framework */,
@@ -108,12 +89,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2C91CFDE2D3594B2008D1376 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C91CFDC2D359460008D1376 /* AppCoordinatorView.swift */,
+				2C91CFDF2D3594E1008D1376 /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
 		2CBAF25A2CD2FF31002A8AB2 = {
 			isa = PBXGroup;
 			children = (
 				2CBAF2652CD2FF31002A8AB2 /* Plantly */,
-				2CBAF2782CD2FF32002A8AB2 /* PlantlyTests */,
-				2CBAF2822CD2FF32002A8AB2 /* PlantlyUITests */,
 				2CBAF2642CD2FF31002A8AB2 /* Products */,
 				2C504A8E2D29511600F25A84 /* Frameworks */,
 			);
@@ -123,8 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				2CBAF2632CD2FF31002A8AB2 /* Plantly.app */,
-				2CBAF2752CD2FF32002A8AB2 /* PlantlyTests.xctest */,
-				2CBAF27F2CD2FF32002A8AB2 /* PlantlyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,10 +118,10 @@
 		2CBAF2652CD2FF31002A8AB2 /* Plantly */ = {
 			isa = PBXGroup;
 			children = (
+				2C91CFB62D345665008D1376 /* GoogleService-Info.plist */,
 				2C504A8D2D29510500F25A84 /* Info.plist */,
 				2CBAF2662CD2FF31002A8AB2 /* PlantlyApp.swift */,
-				2CBAF2682CD2FF31002A8AB2 /* ContentView.swift */,
-				2CBAF26A2CD2FF31002A8AB2 /* Item.swift */,
+				2C91CFDE2D3594B2008D1376 /* AppCoordinator */,
 				2CBAF26C2CD2FF32002A8AB2 /* Assets.xcassets */,
 				2CBAF26E2CD2FF32002A8AB2 /* Preview Content */,
 			);
@@ -148,23 +134,6 @@
 				2CBAF26F2CD2FF32002A8AB2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2CBAF2782CD2FF32002A8AB2 /* PlantlyTests */ = {
-			isa = PBXGroup;
-			children = (
-				2CBAF2792CD2FF32002A8AB2 /* PlantlyTests.swift */,
-			);
-			path = PlantlyTests;
-			sourceTree = "<group>";
-		};
-		2CBAF2822CD2FF32002A8AB2 /* PlantlyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2CBAF2832CD2FF32002A8AB2 /* PlantlyUITests.swift */,
-				2CBAF2852CD2FF32002A8AB2 /* PlantlyUITestsLaunchTests.swift */,
-			);
-			path = PlantlyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,42 +157,6 @@
 			productReference = 2CBAF2632CD2FF31002A8AB2 /* Plantly.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CBAF2742CD2FF32002A8AB2 /* PlantlyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CBAF28C2CD2FF32002A8AB2 /* Build configuration list for PBXNativeTarget "PlantlyTests" */;
-			buildPhases = (
-				2CBAF2712CD2FF32002A8AB2 /* Sources */,
-				2CBAF2722CD2FF32002A8AB2 /* Frameworks */,
-				2CBAF2732CD2FF32002A8AB2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CBAF2772CD2FF32002A8AB2 /* PBXTargetDependency */,
-			);
-			name = PlantlyTests;
-			productName = PlantlyTests;
-			productReference = 2CBAF2752CD2FF32002A8AB2 /* PlantlyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2CBAF27E2CD2FF32002A8AB2 /* PlantlyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CBAF28F2CD2FF32002A8AB2 /* Build configuration list for PBXNativeTarget "PlantlyUITests" */;
-			buildPhases = (
-				2CBAF27B2CD2FF32002A8AB2 /* Sources */,
-				2CBAF27C2CD2FF32002A8AB2 /* Frameworks */,
-				2CBAF27D2CD2FF32002A8AB2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CBAF2812CD2FF32002A8AB2 /* PBXTargetDependency */,
-			);
-			name = PlantlyUITests;
-			productName = PlantlyUITests;
-			productReference = 2CBAF27F2CD2FF32002A8AB2 /* PlantlyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -236,14 +169,6 @@
 				TargetAttributes = {
 					2CBAF2622CD2FF31002A8AB2 = {
 						CreatedOnToolsVersion = 15.0.1;
-					};
-					2CBAF2742CD2FF32002A8AB2 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 2CBAF2622CD2FF31002A8AB2;
-					};
-					2CBAF27E2CD2FF32002A8AB2 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 2CBAF2622CD2FF31002A8AB2;
 					};
 				};
 			};
@@ -261,8 +186,6 @@
 			projectRoot = "";
 			targets = (
 				2CBAF2622CD2FF31002A8AB2 /* Plantly */,
-				2CBAF2742CD2FF32002A8AB2 /* PlantlyTests */,
-				2CBAF27E2CD2FF32002A8AB2 /* PlantlyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,20 +197,7 @@
 			files = (
 				2CBAF2702CD2FF32002A8AB2 /* Preview Assets.xcassets in Resources */,
 				2CBAF26D2CD2FF32002A8AB2 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CBAF2732CD2FF32002A8AB2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CBAF27D2CD2FF32002A8AB2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2C91CFB72D345665008D1376 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,43 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CBAF2692CD2FF31002A8AB2 /* ContentView.swift in Sources */,
-				2CBAF26B2CD2FF31002A8AB2 /* Item.swift in Sources */,
+				2C91CFE02D3594E1008D1376 /* AppCoordinator.swift in Sources */,
 				2CBAF2672CD2FF31002A8AB2 /* PlantlyApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CBAF2712CD2FF32002A8AB2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CBAF27A2CD2FF32002A8AB2 /* PlantlyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CBAF27B2CD2FF32002A8AB2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CBAF2842CD2FF32002A8AB2 /* PlantlyUITests.swift in Sources */,
-				2CBAF2862CD2FF32002A8AB2 /* PlantlyUITestsLaunchTests.swift in Sources */,
+				2C91CFDD2D359460008D1376 /* AppCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2CBAF2772CD2FF32002A8AB2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CBAF2622CD2FF31002A8AB2 /* Plantly */;
-			targetProxy = 2CBAF2762CD2FF32002A8AB2 /* PBXContainerItemProxy */;
-		};
-		2CBAF2812CD2FF32002A8AB2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CBAF2622CD2FF31002A8AB2 /* Plantly */;
-			targetProxy = 2CBAF2802CD2FF32002A8AB2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2CBAF2872CD2FF32002A8AB2 /* Debug */ = {
@@ -468,11 +348,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Plantly/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Plantly;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,11 +381,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Plantly/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Plantly;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,82 +399,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		2CBAF28D2CD2FF32002A8AB2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35953V9L7K;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gui.PlantlyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plantly.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Plantly";
-			};
-			name = Debug;
-		};
-		2CBAF28E2CD2FF32002A8AB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35953V9L7K;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gui.PlantlyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plantly.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Plantly";
-			};
-			name = Release;
-		};
-		2CBAF2902CD2FF32002A8AB2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35953V9L7K;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gui.PlantlyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Plantly;
-			};
-			name = Debug;
-		};
-		2CBAF2912CD2FF32002A8AB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35953V9L7K;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gui.PlantlyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Plantly;
 			};
 			name = Release;
 		};
@@ -615,24 +419,6 @@
 			buildConfigurations = (
 				2CBAF28A2CD2FF32002A8AB2 /* Debug */,
 				2CBAF28B2CD2FF32002A8AB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CBAF28C2CD2FF32002A8AB2 /* Build configuration list for PBXNativeTarget "PlantlyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CBAF28D2CD2FF32002A8AB2 /* Debug */,
-				2CBAF28E2CD2FF32002A8AB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CBAF28F2CD2FF32002A8AB2 /* Build configuration list for PBXNativeTarget "PlantlyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CBAF2902CD2FF32002A8AB2 /* Debug */,
-				2CBAF2912CD2FF32002A8AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
