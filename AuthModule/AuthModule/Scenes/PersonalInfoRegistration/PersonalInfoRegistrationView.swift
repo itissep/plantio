@@ -33,38 +33,45 @@ struct PersonalInfoRegistrationView: View {
     var body: some View {
         VStack(spacing: PUI.Spacing.large) {
             Text("Personal reg info")
+                .font(PUI.Font.title)
+                .foregroundStyle(PUI.Color.textPrimary)
             
             TextField("", text: name)
+                .formItem()
                 .labeled("name")
             
             TextField("", text: username)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
-                .formErrorableItem(
-                    message: viewModel.state.usernameError,
+                .formItem(
+                    errorMessage: viewModel.state.usernameError,
                     isErrorShowed: viewModel.state.isUsernameErrorShowing
                 )
                 .labeled("username")
             
             TextField("", text: email)
                 .keyboardType(.emailAddress)
-                .formErrorableItem(
-                    message: viewModel.state.emailError,
+                .formItem(
+                    errorMessage: viewModel.state.emailError,
                     isErrorShowed: viewModel.state.isEmailErrorShowing
                 )
                 .labeled("email")
             
-            Button("logInToAccount") {
-                viewModel.handle(.continueTapped)
-            }
-            .disabled(viewModel.state.isContinueDisabled)
-            
+            Button("next step") { viewModel.handle(.continueTapped) }
+                .disabled(viewModel.state.isContinueDisabled)
+                .baseButtonStyle()
+                
             Spacer()
             
-            Button("alreadyHaveAccount") {
-                viewModel.handle(.logInTapped)
-            }
+            VStack(spacing: PUI.Spacing.medium) {
+                Text("already have an account?")
+                    .font(PUI.Font.caption)
+                    .foregroundStyle(PUI.Color.textSecondary)
+                Button("log in") { viewModel.handle(.logInTapped) }
+                    .inlineButtonStyle()
+                
+            }.padding(.bottom, PUI.Spacing.large)
         }
-        .padding(.top)
+        .padding(.horizontal, PUI.Spacing.large)
     }
 }

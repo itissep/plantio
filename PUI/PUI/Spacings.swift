@@ -2,8 +2,11 @@ import SwiftUI
 
 public extension PUI {
     enum Spacing {
-        public static let small: CGFloat = 2
-        public static let medium: CGFloat = 4
-        public static let large: CGFloat = 10
+        ///4
+        public static let small: CGFloat = 4
+        /// 6
+        public static let medium: CGFloat = 6
+        /// 12
+        public static let large: CGFloat = 12
     }
 }

@@ -29,8 +29,8 @@ public extension PUI {
                         isSecured.toggle()
                     }
             }
-            .formErrorableItem(
-                message: errorMessage,
+            .formItem(
+                errorMessage: errorMessage,
                 isErrorShowed: isErrorShowed
             )
         }

@@ -13,7 +13,8 @@
 		2C55206C2D4E500900DA2F35 /* SecureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55206B2D4E500900DA2F35 /* SecureInput.swift */; };
 		2C55206E2D4E504600DA2F35 /* Errorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55206D2D4E504600DA2F35 /* Errorable.swift */; };
 		2C5520742D4E6A9900DA2F35 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520732D4E6A9900DA2F35 /* DatePickerField.swift */; };
-		2C55208A2D4E926000DA2F35 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520892D4E926000DA2F35 /* Button.swift */; };
+		2C55208A2D4E926000DA2F35 /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520892D4E926000DA2F35 /* BaseButtonStyle.swift */; };
+		2C55208C2D4E97B100DA2F35 /* InlineButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55208B2D4E97B100DA2F35 /* InlineButtonStyle.swift */; };
 		2C91CF512D3405DB008D1376 /* PUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C91CF502D3405DB008D1376 /* PUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C91CF582D3405EC008D1376 /* PUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF572D3405EC008D1376 /* PUI.swift */; };
 		2C91CF5B2D340661008D1376 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF5A2D340661008D1376 /* TagLabel.swift */; };
@@ -62,7 +63,8 @@
 		2C55206B2D4E500900DA2F35 /* SecureInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInput.swift; sourceTree = "<group>"; };
 		2C55206D2D4E504600DA2F35 /* Errorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errorable.swift; sourceTree = "<group>"; };
 		2C5520732D4E6A9900DA2F35 /* DatePickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
-		2C5520892D4E926000DA2F35 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		2C5520892D4E926000DA2F35 /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
+		2C55208B2D4E97B100DA2F35 /* InlineButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineButtonStyle.swift; sourceTree = "<group>"; };
 		2C91CF4D2D3405DB008D1376 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C91CF502D3405DB008D1376 /* PUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PUI.h; sourceTree = "<group>"; };
 		2C91CF572D3405EC008D1376 /* PUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUI.swift; sourceTree = "<group>"; };
@@ -143,7 +145,8 @@
 				2C5520692D4E4F9C00DA2F35 /* ProgressView.swift */,
 				2C55206B2D4E500900DA2F35 /* SecureInput.swift */,
 				2C5520732D4E6A9900DA2F35 /* DatePickerField.swift */,
-				2C5520892D4E926000DA2F35 /* Button.swift */,
+				2C5520892D4E926000DA2F35 /* BaseButtonStyle.swift */,
+				2C55208B2D4E97B100DA2F35 /* InlineButtonStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -300,9 +303,10 @@
 				2C55203F2D4E422A00DA2F35 /* Input.swift in Sources */,
 				2C55206C2D4E500900DA2F35 /* SecureInput.swift in Sources */,
 				2C91D05F2D35A6C7008D1376 /* HasPlaceholder.swift in Sources */,
-				2C55208A2D4E926000DA2F35 /* Button.swift in Sources */,
+				2C55208A2D4E926000DA2F35 /* BaseButtonStyle.swift in Sources */,
 				2C91CF582D3405EC008D1376 /* PUI.swift in Sources */,
 				2C5520672D4E4F1C00DA2F35 /* LabeledViewModifier.swift in Sources */,
+				2C55208C2D4E97B100DA2F35 /* InlineButtonStyle.swift in Sources */,
 				2C91CF6F2D340F54008D1376 /* Color+HEX.swift in Sources */,
 				2C55206A2D4E4F9C00DA2F35 /* ProgressView.swift in Sources */,
 				2C91CF712D3410DD008D1376 /* Font.swift in Sources */,

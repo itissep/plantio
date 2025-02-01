@@ -23,14 +23,16 @@ struct LoginView: View {
     }
     
     var body: some View {
-        
         VStack(spacing: PUI.Spacing.large) {
             
             Text("Login title")
+                .font(PUI.Font.title)
+                .foregroundStyle(PUI.Color.textPrimary)
             
             Group {
                 
                 TextField("", text: username)
+                    .formItem()
                     .labeled("username")
                 
                 PUI.SecureInputView(text: password, isErrorShowed: viewModel.state.isLoginErrorShowing)
@@ -48,16 +50,20 @@ struct LoginView: View {
                 isShowed: viewModel.state.isLoginErrorShowing
             )
             
-            Button("Log in") {
-                viewModel.handle(.logInTapped)
-            }
-            .disabled(viewModel.state.isLogInDisabled)
+            Button("Log in") { viewModel.handle(.logInTapped) }
+                .disabled(viewModel.state.isLogInDisabled)
+                .baseButtonStyle()
+            Spacer()
+            
+            VStack(spacing: PUI.Spacing.medium) {
+                Text("no account yet?")
+                    .font(PUI.Font.caption)
+                    .foregroundStyle(PUI.Color.textSecondary)
+                Button("sign up") { viewModel.handle(.registerTapped) }
+                    .inlineButtonStyle()
+            }.padding(.bottom, PUI.Spacing.large)
+            
         }
-
-        Spacer()
-
-        Button("no account yet?") {
-            viewModel.handle(.registerTapped)
-        }
+        .padding(.horizontal, PUI.Spacing.large)
     }
 }

@@ -25,7 +25,10 @@ struct PasswordRegistrationView: View {
     
     var body: some View {
         VStack(spacing: PUI.Spacing.large) {
+            
             Text("password")
+                .font(PUI.Font.title)
+                .foregroundStyle(PUI.Color.textPrimary)
             
             Group {
                 PUI.SecureInputView(
@@ -54,17 +57,20 @@ struct PasswordRegistrationView: View {
                 isShowed: viewModel.state.isRegisterErrorShowing
             )
 
-            Button("Register") {
-                viewModel.handle(.registerTapped)
-            }
-            .disabled(viewModel.state.isRegisterDisabled)
-
+            Button("Register") { viewModel.handle(.registerTapped) }
+                .disabled(viewModel.state.isRegisterDisabled)
+                .baseButtonStyle()
             Spacer()
-
-            Button("log in") {
-                viewModel.handle(.logInTapped)
-            }
+            
+            VStack(spacing: PUI.Spacing.medium) {
+                Text("already have an account?")
+                    .font(PUI.Font.caption)
+                    .foregroundStyle(PUI.Color.textSecondary)
+                Button("log in") { viewModel.handle(.logInTapped) }
+                    .inlineButtonStyle()
+                
+            }.padding(.bottom, PUI.Spacing.large)
         }
-        .padding(.top)
+        .padding(.horizontal, PUI.Spacing.large)
     }
 }

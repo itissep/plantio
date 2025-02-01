@@ -19,23 +19,23 @@ struct WelcomeView: View {
             VStack(spacing: PUI.Spacing.small) {
                 Text("Welcome")
                     .font(PUI.Font.title)
+                    .foregroundStyle(PUI.Color.textPrimary)
                 
                 Text("Some kind words")
                     .font(PUI.Font.text)
+                    .foregroundStyle(PUI.Color.textSecondary)
             }
             .multilineTextAlignment(.center)
             
             Spacer()
-                .frame(height: PUI.Spacing.large)
+                .frame(height: 50)
             
-            VStack(spacing: PUI.Spacing.small) {
-                Button("Registration") {
-                    viewModel.handle(.registrationTapped)
-                }
+            VStack(spacing: PUI.Spacing.large) {
+                Button("Registration") { viewModel.handle(.registrationTapped)}
+                    .baseButtonStyle()
                 
-                Button("Login") {
-                    viewModel.handle(.logInTapped)
-                }
+                Button("Login") { viewModel.handle(.logInTapped) }
+                    .baseButtonStyle(isProminent: false)
             }
             .padding(.horizontal)
         }
