@@ -35,7 +35,7 @@ struct PersonalInfoRegistrationView: View {
             Text("Personal reg info")
             
             TextField("", text: name)
-                .smallLabeled("name")
+                .labeled("name")
             
             TextField("", text: username)
                 .autocorrectionDisabled()
@@ -44,7 +44,7 @@ struct PersonalInfoRegistrationView: View {
                     message: viewModel.state.usernameError,
                     isErrorShowed: viewModel.state.isUsernameErrorShowing
                 )
-                .smallLabeled("username")
+                .labeled("username")
             
             TextField("", text: email)
                 .keyboardType(.emailAddress)
@@ -52,7 +52,7 @@ struct PersonalInfoRegistrationView: View {
                     message: viewModel.state.emailError,
                     isErrorShowed: viewModel.state.isEmailErrorShowing
                 )
-                .smallLabeled("email")
+                .labeled("email")
             
             Button("logInToAccount") {
                 viewModel.handle(.continueTapped)

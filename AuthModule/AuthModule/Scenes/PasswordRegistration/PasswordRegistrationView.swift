@@ -33,14 +33,14 @@ struct PasswordRegistrationView: View {
                     errorMessage: viewModel.state.passwordError,
                     isErrorShowed: viewModel.state.isPasswordErrorShowing
                 )
-                .smallLabeled("password")
+                .labeled("password")
 
                 PUI.SecureInputView(
                     text: confirmPassword,
                     errorMessage: viewModel.state.confirmPasswordError,
                     isErrorShowed: viewModel.state.isConfirmPasswordErrorShowing
                 )
-                .smallLabeled("confirmPassword")
+                .labeled("confirmPassword")
 
                 if viewModel.state.isLoading {
                     PUI.BaseProgressView()

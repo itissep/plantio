@@ -10,21 +10,23 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack(spacing: PUI.Spacing.medium) {
-            Image(systemName: "phone")
+            Image(systemName: "tree.fill")
                 .resizable()
                 .scaledToFit()
                 .frame(maxHeight: 50)
+                .foregroundColor(PUI.Color.accent)
             
             VStack(spacing: PUI.Spacing.small) {
                 Text("Welcome")
-                    .bold()
-                    .font(.title2)
+                    .font(PUI.Font.title)
                 
                 Text("Some kind words")
-                    .font(.body)
+                    .font(PUI.Font.text)
             }
             .multilineTextAlignment(.center)
-            .padding()
+            
+            Spacer()
+                .frame(height: PUI.Spacing.large)
             
             VStack(spacing: PUI.Spacing.small) {
                 Button("Registration") {

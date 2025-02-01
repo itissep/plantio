@@ -31,10 +31,10 @@ struct LoginView: View {
             Group {
                 
                 TextField("", text: username)
-                    .smallLabeled("username")
+                    .labeled("username")
                 
                 PUI.SecureInputView(text: password, isErrorShowed: viewModel.state.isLoginErrorShowing)
-                    .smallLabeled("password")
+                    .labeled("password")
                 
                 if viewModel.state.isLoading {
                     PUI.BaseProgressView()
