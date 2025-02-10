@@ -10,7 +10,6 @@
 		2C4F246A2CDFD45A0046AA5F /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F24692CDFD45A0046AA5F /* Core.docc */; };
 		2C4F24702CDFD45B0046AA5F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4F24652CDFD45A0046AA5F /* Core.framework */; };
 		2C4F24762CDFD45B0046AA5F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4F24682CDFD45A0046AA5F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C525B8B2CE6989800A0B14C /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B8A2CE6989800A0B14C /* Example.swift */; };
 		2C525B8F2CE69C6700A0B14C /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */; };
 		2C525B922CE69CAE00A0B14C /* PlantlyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */; };
 		2C8CE6502D5A6C67005C0046 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE64D2D5A6C67005C0046 /* AppServiceLocator.swift */; };
@@ -36,7 +35,6 @@
 		2C4F24682CDFD45A0046AA5F /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		2C4F24692CDFD45A0046AA5F /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
 		2C4F246F2CDFD45B0046AA5F /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C525B8A2CE6989800A0B14C /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyAPI.swift; sourceTree = "<group>"; };
 		2C8CE6492D5A6C67005C0046 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			children = (
 				2C525B8D2CE69C4900A0B14C /* ApiSpecific */,
 				2C525B8C2CE69C4200A0B14C /* Basic */,
-				2C525B8A2CE6989800A0B14C /* Example.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -283,7 +280,6 @@
 				2C8CE6532D5A6C67005C0046 /* ScreenFactory.swift in Sources */,
 				2C8CE6542D5A6C67005C0046 /* Coordinator.swift in Sources */,
 				2C4F246A2CDFD45A0046AA5F /* Core.docc in Sources */,
-				2C525B8B2CE6989800A0B14C /* Example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
