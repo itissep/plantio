@@ -12,8 +12,6 @@
 		2C91D00A2D359598008D1376 /* ProfileServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91D0092D359598008D1376 /* ProfileServiceProtocol.swift */; };
 		2C91D00D2D3595C0008D1376 /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91D00C2D3595C0008D1376 /* Models.framework */; };
 		2C91D00E2D3595C0008D1376 /* Models.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91D00C2D3595C0008D1376 /* Models.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2C91D0612D3C15C2008D1376 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91D0602D3C15C2008D1376 /* ProfileService.swift */; };
-		2C91D0652D3C17D5008D1376 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91D0642D3C17D5008D1376 /* DataSource.swift */; };
 		2C91D0672D3C196D008D1376 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91D0662D3C196D008D1376 /* Core.framework */; };
 		2C91D0682D3C196D008D1376 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91D0662D3C196D008D1376 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -39,8 +37,6 @@
 		2C91D0022D359578008D1376 /* ProfileModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileModule.h; sourceTree = "<group>"; };
 		2C91D0092D359598008D1376 /* ProfileServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceProtocol.swift; sourceTree = "<group>"; };
 		2C91D00C2D3595C0008D1376 /* Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C91D0602D3C15C2008D1376 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
-		2C91D0642D3C17D5008D1376 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		2C91D0662D3C196D008D1376 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,8 +75,6 @@
 			children = (
 				2C91D0022D359578008D1376 /* ProfileModule.h */,
 				2C91D0092D359598008D1376 /* ProfileServiceProtocol.swift */,
-				2C91D0602D3C15C2008D1376 /* ProfileService.swift */,
-				2C91D0642D3C17D5008D1376 /* DataSource.swift */,
 				2C5520852D4E84F900DA2F35 /* MockProfileService.swift */,
 			);
 			path = ProfileModule;
@@ -176,9 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C91D0652D3C17D5008D1376 /* DataSource.swift in Sources */,
 				2C91D00A2D359598008D1376 /* ProfileServiceProtocol.swift in Sources */,
-				2C91D0612D3C15C2008D1376 /* ProfileService.swift in Sources */,
 				2C5520862D4E84F900DA2F35 /* MockProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,10 +332,11 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -376,9 +369,10 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

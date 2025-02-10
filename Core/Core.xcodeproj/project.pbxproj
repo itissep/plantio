@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		2C4F246A2CDFD45A0046AA5F /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F24692CDFD45A0046AA5F /* Core.docc */; };
 		2C4F24702CDFD45B0046AA5F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4F24652CDFD45A0046AA5F /* Core.framework */; };
-		2C4F24752CDFD45B0046AA5F /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F24742CDFD45B0046AA5F /* CoreTests.swift */; };
 		2C4F24762CDFD45B0046AA5F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4F24682CDFD45A0046AA5F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C525B8B2CE6989800A0B14C /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B8A2CE6989800A0B14C /* Example.swift */; };
 		2C525B8F2CE69C6700A0B14C /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */; };
 		2C525B922CE69CAE00A0B14C /* PlantlyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */; };
+		2C8CE6502D5A6C67005C0046 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE64D2D5A6C67005C0046 /* AppServiceLocator.swift */; };
+		2C8CE6512D5A6C67005C0046 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE64A2D5A6C67005C0046 /* Routable.swift */; };
+		2C8CE6522D5A6C67005C0046 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE64E2D5A6C67005C0046 /* ServiceLocator.swift */; };
+		2C8CE6532D5A6C67005C0046 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE64C2D5A6C67005C0046 /* ScreenFactory.swift */; };
+		2C8CE6542D5A6C67005C0046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE6492D5A6C67005C0046 /* Coordinator.swift */; };
+		2C8CE6572D5A6CA8005C0046 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE6552D5A6CA8005C0046 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +36,15 @@
 		2C4F24682CDFD45A0046AA5F /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		2C4F24692CDFD45A0046AA5F /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
 		2C4F246F2CDFD45B0046AA5F /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C4F24742CDFD45B0046AA5F /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		2C525B8A2CE6989800A0B14C /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		2C525B8E2CE69C6700A0B14C /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		2C525B912CE69CAE00A0B14C /* PlantlyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyAPI.swift; sourceTree = "<group>"; };
+		2C8CE6492D5A6C67005C0046 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2C8CE64A2D5A6C67005C0046 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		2C8CE64C2D5A6C67005C0046 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		2C8CE64D2D5A6C67005C0046 /* AppServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
+		2C8CE64E2D5A6C67005C0046 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		2C8CE6552D5A6CA8005C0046 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				2C4F24672CDFD45A0046AA5F /* Core */,
-				2C4F24732CDFD45B0046AA5F /* CoreTests */,
 				2C4F24662CDFD45A0046AA5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,23 +86,13 @@
 		2C4F24672CDFD45A0046AA5F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2C525B932CE69DDE00A0B14C /* Logging */,
+				2C8CE6562D5A6CA8005C0046 /* Protocols */,
 				2C4F24992CDFD7F00046AA5F /* DI */,
-				2C4F24822CDFD60A0046AA5F /* Storage */,
-				2C4F24812CDFD5F40046AA5F /* FeatureManagering */,
 				2C4F247F2CDFD5060046AA5F /* Networking */,
 				2C4F24682CDFD45A0046AA5F /* Core.h */,
 				2C4F24692CDFD45A0046AA5F /* Core.docc */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		2C4F24732CDFD45B0046AA5F /* CoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				2C4F24742CDFD45B0046AA5F /* CoreTests.swift */,
-			);
-			path = CoreTests;
 			sourceTree = "<group>";
 		};
 		2C4F247F2CDFD5060046AA5F /* Networking */ = {
@@ -106,23 +105,12 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		2C4F24812CDFD5F40046AA5F /* FeatureManagering */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FeatureManagering;
-			sourceTree = "<group>";
-		};
-		2C4F24822CDFD60A0046AA5F /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		2C4F24992CDFD7F00046AA5F /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CE64B2D5A6C67005C0046 /* Coordinator */,
+				2C8CE64C2D5A6C67005C0046 /* ScreenFactory.swift */,
+				2C8CE64F2D5A6C67005C0046 /* ServiceLocator */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -151,11 +139,30 @@
 			path = PlantlyAPI;
 			sourceTree = "<group>";
 		};
-		2C525B932CE69DDE00A0B14C /* Logging */ = {
+		2C8CE64B2D5A6C67005C0046 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CE6492D5A6C67005C0046 /* Coordinator.swift */,
+				2C8CE64A2D5A6C67005C0046 /* Routable.swift */,
 			);
-			path = Logging;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2C8CE64F2D5A6C67005C0046 /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE64D2D5A6C67005C0046 /* AppServiceLocator.swift */,
+				2C8CE64E2D5A6C67005C0046 /* ServiceLocator.swift */,
+			);
+			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		2C8CE6562D5A6CA8005C0046 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE6552D5A6CA8005C0046 /* ViewModel.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8CE6572D5A6CA8005C0046 /* ViewModel.swift in Sources */,
 				2C525B8F2CE69C6700A0B14C /* NetworkingService.swift in Sources */,
 				2C525B922CE69CAE00A0B14C /* PlantlyAPI.swift in Sources */,
+				2C8CE6502D5A6C67005C0046 /* AppServiceLocator.swift in Sources */,
+				2C8CE6512D5A6C67005C0046 /* Routable.swift in Sources */,
+				2C8CE6522D5A6C67005C0046 /* ServiceLocator.swift in Sources */,
+				2C8CE6532D5A6C67005C0046 /* ScreenFactory.swift in Sources */,
+				2C8CE6542D5A6C67005C0046 /* Coordinator.swift in Sources */,
 				2C4F246A2CDFD45A0046AA5F /* Core.docc in Sources */,
 				2C525B8B2CE6989800A0B14C /* Example.swift in Sources */,
 			);
@@ -278,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4F24752CDFD45B0046AA5F /* CoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,9 +455,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gui.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,16 +490,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gui.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		2C4F247D2CDFD45B0046AA5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35953V9L7K;
@@ -500,7 +519,6 @@
 		2C4F247E2CDFD45B0046AA5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35953V9L7K;

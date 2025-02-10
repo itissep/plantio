@@ -12,7 +12,6 @@
 		2C55206A2D4E4F9C00DA2F35 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520692D4E4F9C00DA2F35 /* ProgressView.swift */; };
 		2C55206C2D4E500900DA2F35 /* SecureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55206B2D4E500900DA2F35 /* SecureInput.swift */; };
 		2C55206E2D4E504600DA2F35 /* Errorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55206D2D4E504600DA2F35 /* Errorable.swift */; };
-		2C5520742D4E6A9900DA2F35 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520732D4E6A9900DA2F35 /* DatePickerField.swift */; };
 		2C55208A2D4E926000DA2F35 /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520892D4E926000DA2F35 /* BaseButtonStyle.swift */; };
 		2C55208C2D4E97B100DA2F35 /* InlineButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55208B2D4E97B100DA2F35 /* InlineButtonStyle.swift */; };
 		2C91CF512D3405DB008D1376 /* PUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C91CF502D3405DB008D1376 /* PUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,8 +27,6 @@
 		2C91CF892D34122E008D1376 /* PUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91CF4D2D3405DB008D1376 /* PUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C91CF912D3416A0008D1376 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF902D3416A0008D1376 /* Constants.swift */; };
 		2C91CF932D3416E9008D1376 /* Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CF922D3416E9008D1376 /* Spacings.swift */; };
-		2C91D02E2D35A240008D1376 /* BackgroundColorViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91D02D2D35A240008D1376 /* BackgroundColorViewModifier.swift */; };
-		2C91D05F2D35A6C7008D1376 /* HasPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91D05E2D35A6C7008D1376 /* HasPlaceholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +59,6 @@
 		2C5520692D4E4F9C00DA2F35 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		2C55206B2D4E500900DA2F35 /* SecureInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInput.swift; sourceTree = "<group>"; };
 		2C55206D2D4E504600DA2F35 /* Errorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errorable.swift; sourceTree = "<group>"; };
-		2C5520732D4E6A9900DA2F35 /* DatePickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
 		2C5520892D4E926000DA2F35 /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
 		2C55208B2D4E97B100DA2F35 /* InlineButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineButtonStyle.swift; sourceTree = "<group>"; };
 		2C91CF4D2D3405DB008D1376 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +75,6 @@
 		2C91CF862D341226008D1376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2C91CF902D3416A0008D1376 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C91CF922D3416E9008D1376 /* Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacings.swift; sourceTree = "<group>"; };
-		2C91D02D2D35A240008D1376 /* BackgroundColorViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorViewModifier.swift; sourceTree = "<group>"; };
-		2C91D05E2D35A6C7008D1376 /* HasPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasPlaceholder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +138,6 @@
 				2C55203E2D4E422A00DA2F35 /* Input.swift */,
 				2C5520692D4E4F9C00DA2F35 /* ProgressView.swift */,
 				2C55206B2D4E500900DA2F35 /* SecureInput.swift */,
-				2C5520732D4E6A9900DA2F35 /* DatePickerField.swift */,
 				2C5520892D4E926000DA2F35 /* BaseButtonStyle.swift */,
 				2C55208B2D4E97B100DA2F35 /* InlineButtonStyle.swift */,
 			);
@@ -155,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				2C91CF6E2D340F54008D1376 /* Color+HEX.swift */,
-				2C91D05E2D35A6C7008D1376 /* HasPlaceholder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -181,7 +173,6 @@
 		2C91D02C2D35A22E008D1376 /* ViewModifier */ = {
 			isa = PBXGroup;
 			children = (
-				2C91D02D2D35A240008D1376 /* BackgroundColorViewModifier.swift */,
 				2C5520662D4E4F1C00DA2F35 /* LabeledViewModifier.swift */,
 				2C55206D2D4E504600DA2F35 /* Errorable.swift */,
 			);
@@ -302,7 +293,6 @@
 			files = (
 				2C55203F2D4E422A00DA2F35 /* Input.swift in Sources */,
 				2C55206C2D4E500900DA2F35 /* SecureInput.swift in Sources */,
-				2C91D05F2D35A6C7008D1376 /* HasPlaceholder.swift in Sources */,
 				2C55208A2D4E926000DA2F35 /* BaseButtonStyle.swift in Sources */,
 				2C91CF582D3405EC008D1376 /* PUI.swift in Sources */,
 				2C5520672D4E4F1C00DA2F35 /* LabeledViewModifier.swift in Sources */,
@@ -310,8 +300,6 @@
 				2C91CF6F2D340F54008D1376 /* Color+HEX.swift in Sources */,
 				2C55206A2D4E4F9C00DA2F35 /* ProgressView.swift in Sources */,
 				2C91CF712D3410DD008D1376 /* Font.swift in Sources */,
-				2C91D02E2D35A240008D1376 /* BackgroundColorViewModifier.swift in Sources */,
-				2C5520742D4E6A9900DA2F35 /* DatePickerField.swift in Sources */,
 				2C91CF632D340AD7008D1376 /* Colors.swift in Sources */,
 				2C55206E2D4E504600DA2F35 /* Errorable.swift in Sources */,
 				2C91CF5B2D340661008D1376 /* TagLabel.swift in Sources */,
@@ -480,6 +468,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -496,7 +485,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -516,6 +505,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -531,7 +521,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
