@@ -27,7 +27,7 @@ struct LoginView: View {
             
             Text("Login title")
                 .font(PUI.Font.title)
-                .foregroundStyle(PUI.Color.textPrimary)
+                .foregroundStyle(Color.pui.textPrimary)
             
             Group {
                 
@@ -58,7 +58,7 @@ struct LoginView: View {
             VStack(spacing: PUI.Spacing.medium) {
                 Text("no account yet?")
                     .font(PUI.Font.caption)
-                    .foregroundStyle(PUI.Color.textSecondary)
+                    .foregroundStyle(Color.pui.textSecondary)
                 Button("sign up") { viewModel.handle(.registerTapped) }
                     .inlineButtonStyle()
             }.padding(.bottom, PUI.Spacing.large)

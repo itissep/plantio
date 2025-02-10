@@ -28,7 +28,7 @@ struct PasswordRegistrationView: View {
             
             Text("password")
                 .font(PUI.Font.title)
-                .foregroundStyle(PUI.Color.textPrimary)
+                .foregroundStyle(Color.pui.textPrimary)
             
             Group {
                 PUI.SecureInputView(
@@ -65,7 +65,7 @@ struct PasswordRegistrationView: View {
             VStack(spacing: PUI.Spacing.medium) {
                 Text("already have an account?")
                     .font(PUI.Font.caption)
-                    .foregroundStyle(PUI.Color.textSecondary)
+                    .foregroundStyle(Color.pui.textSecondary)
                 Button("log in") { viewModel.handle(.logInTapped) }
                     .inlineButtonStyle()
                 

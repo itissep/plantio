@@ -10,20 +10,20 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack(spacing: PUI.Spacing.medium) {
-            Image(systemName: "tree.fill")
+            Image.pui.iconCircle
                 .resizable()
                 .scaledToFit()
-                .frame(maxHeight: 50)
-                .foregroundColor(PUI.Color.accent)
+                .frame(maxHeight: 100)
+                .foregroundColor(Color.pui.accent)
             
             VStack(spacing: PUI.Spacing.small) {
                 Text("Welcome")
                     .font(PUI.Font.title)
-                    .foregroundStyle(PUI.Color.textPrimary)
+                    .foregroundStyle(Color.pui.textPrimary)
                 
                 Text("Some kind words")
                     .font(PUI.Font.text)
-                    .foregroundStyle(PUI.Color.textSecondary)
+                    .foregroundStyle(Color.pui.textSecondary)
             }
             .multilineTextAlignment(.center)
             
