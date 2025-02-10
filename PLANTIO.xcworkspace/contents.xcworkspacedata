@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:PLANTIO/PLANTIO.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/Core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PUI/PUI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AuthModule/AuthModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ProfileModule/ProfileModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Models/Models.xcodeproj">
+   </FileRef>
+</Workspace>
