@@ -8,7 +8,7 @@ public struct LabeledViewModifier: ViewModifier {
         VStack(alignment: .leading, spacing: PUI.Spacing.small) {
             Text(title)
                 .font(PUI.Font.text)
-                .foregroundStyle(PUI.Color.textPrimary)
+                .foregroundStyle(Color.pui.textPrimary)
                 .padding(.leading, PUI.Spacing.medium)
 
             content

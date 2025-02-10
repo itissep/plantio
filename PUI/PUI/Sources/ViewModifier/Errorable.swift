@@ -64,7 +64,7 @@ public struct FormItemBackgroundViewModifier: ViewModifier {
 
         var tintColor: Color {
             switch self {
-            case .default: PUI.Color.accent
+            case .default: .pui.accent
             case .error: .gray
             }
         }
@@ -78,7 +78,7 @@ public struct FormItemBackgroundViewModifier: ViewModifier {
 
         var backgroundColor: Color {
             switch self {
-            case .default: PUI.Color.backgroundSecondary
+            case .default: .pui.backgroundSecondary
             case .error: .red.opacity(Constants.errorOpacity)
             }
         }

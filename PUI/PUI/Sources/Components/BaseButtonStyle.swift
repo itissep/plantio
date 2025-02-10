@@ -1,7 +1,7 @@
 import SwiftUI
 
 public extension PUI {
-    struct InlineButtonStyle: ButtonStyle {
+    struct BaseButtonStyle: ButtonStyle {
 
         let isProminent: Bool
         @Environment(\.isEnabled) var isEnabled: Bool
@@ -9,7 +9,11 @@ public extension PUI {
         public func makeBody(configuration: Configuration) -> some View {
             configuration.label
                 .font(PUI.Font.text)
-                .foregroundStyle(isProminent ? PUI.Color.accent : PUI.Color.accentButton)
+                .foregroundStyle(isEnabled ? Color.pui.backgroundPrimary : Color.pui.textPrimary)
+                .frame(maxWidth: .infinity)
+                .frame(height: 42)
+                .background(isProminent ? Color.pui.accent : Color.pui.accentButton)
+                .clipShape(.rect(cornerRadius: PUI.Constant.cornerRadius))
                 .opacity(configuration.isPressed ? Constants.opacityPressed : opacity)
         }
 
@@ -32,7 +36,7 @@ public extension PUI {
 }
 
 public extension View {
-    func inlineButtonStyle(isProminent: Bool = true) -> some View {
-        buttonStyle(PUI.InlineButtonStyle(isProminent: isProminent))
+    func baseButtonStyle(isProminent: Bool = true) -> some View {
+        buttonStyle(PUI.BaseButtonStyle(isProminent: isProminent))
     }
 }
