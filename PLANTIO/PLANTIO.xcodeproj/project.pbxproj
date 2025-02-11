@@ -40,6 +40,7 @@
 		2C8CE6402D5A6ACC005C0046 /* AuthModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8CE6432D5A6AD1005C0046 /* ProfileModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProfileModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8CE6462D5A6ADF005C0046 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8CE72A2D5AA7A0005C0046 /* ProfileModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProfileModule.xcodeproj; path = ../ProfileModule/ProfileModule.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,12 +86,20 @@
 		2C8CE63B2D5A6AC8005C0046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CE72A2D5AA7A0005C0046 /* ProfileModule.xcodeproj */,
 				2C8CE6462D5A6ADF005C0046 /* PUI.framework */,
 				2C8CE6432D5A6AD1005C0046 /* ProfileModule.framework */,
 				2C8CE6402D5A6ACC005C0046 /* AuthModule.framework */,
 				2C8CE63C2D5A6AC8005C0046 /* Core.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C8CE72B2D5AA7A0005C0046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +155,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2C8CE60D2D5A68D6005C0046 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2C8CE72B2D5AA7A0005C0046 /* Products */;
+					ProjectRef = 2C8CE72A2D5AA7A0005C0046 /* ProfileModule.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2C8CE60B2D5A68D6005C0046 /* PLANTIO */,
@@ -300,7 +315,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PLANTIO/Preview Content\"";
 				DEVELOPMENT_TEAM = 35953V9L7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -336,7 +350,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PLANTIO/Preview Content\"";
 				DEVELOPMENT_TEAM = 35953V9L7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
