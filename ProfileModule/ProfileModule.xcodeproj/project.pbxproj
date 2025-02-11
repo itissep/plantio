@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2C5520862D4E84F900DA2F35 /* MockProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5520852D4E84F900DA2F35 /* MockProfileService.swift */; };
+		2C8CE7492D5AA859005C0046 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7442D5AA859005C0046 /* ProfileCoordinator.swift */; };
+		2C8CE74A2D5AA859005C0046 /* ProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7452D5AA859005C0046 /* ProfileCoordinatorProtocol.swift */; };
+		2C8CE74B2D5AA859005C0046 /* ProfileCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7462D5AA859005C0046 /* ProfileCoordinatorView.swift */; };
+		2C8CE74F2D5B2E05005C0046 /* ScreenFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE74E2D5B2E05005C0046 /* ScreenFactoryProtocol.swift */; };
+		2C8CE7552D5B2EAE005C0046 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7532D5B2EAE005C0046 /* ProfileView.swift */; };
+		2C8CE7592D5B2F21005C0046 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7582D5B2F21005C0046 /* ProfileViewModel.swift */; };
+		2C8CE75B2D5B2F4C005C0046 /* ProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE75A2D5B2F4C005C0046 /* ProfileViewState.swift */; };
+		2C8CE75F2D5B38C8005C0046 /* EditProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE75E2D5B38C8005C0046 /* EditProfileViewState.swift */; };
+		2C8CE7612D5B3951005C0046 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7602D5B3951005C0046 /* EditProfileViewModel.swift */; };
+		2C8CE7672D5B3E28005C0046 /* AuthModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8CE7662D5B3E28005C0046 /* AuthModule.framework */; };
+		2C8CE7682D5B3E28005C0046 /* AuthModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8CE7662D5B3E28005C0046 /* AuthModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C8CE76A2D5B3E4B005C0046 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7692D5B3E4B005C0046 /* EditProfileView.swift */; };
+		2C8CE76C2D5B7484005C0046 /* ScreenFactory+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE76B2D5B7484005C0046 /* ScreenFactory+Profile.swift */; };
 		2C91D0032D359578008D1376 /* ProfileModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C91D0022D359578008D1376 /* ProfileModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C91D00A2D359598008D1376 /* ProfileServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91D0092D359598008D1376 /* ProfileServiceProtocol.swift */; };
 		2C91D00D2D3595C0008D1376 /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C91D00C2D3595C0008D1376 /* Models.framework */; };
@@ -24,6 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2C91D00E2D3595C0008D1376 /* Models.framework in Embed Frameworks */,
+				2C8CE7682D5B3E28005C0046 /* AuthModule.framework in Embed Frameworks */,
 				2C91D0682D3C196D008D1376 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -33,6 +47,18 @@
 
 /* Begin PBXFileReference section */
 		2C5520852D4E84F900DA2F35 /* MockProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileService.swift; sourceTree = "<group>"; };
+		2C8CE7442D5AA859005C0046 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		2C8CE7452D5AA859005C0046 /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		2C8CE7462D5AA859005C0046 /* ProfileCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorView.swift; sourceTree = "<group>"; };
+		2C8CE74E2D5B2E05005C0046 /* ScreenFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C8CE7532D5B2EAE005C0046 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2C8CE7582D5B2F21005C0046 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		2C8CE75A2D5B2F4C005C0046 /* ProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewState.swift; sourceTree = "<group>"; };
+		2C8CE75E2D5B38C8005C0046 /* EditProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewState.swift; sourceTree = "<group>"; };
+		2C8CE7602D5B3951005C0046 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		2C8CE7662D5B3E28005C0046 /* AuthModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8CE7692D5B3E4B005C0046 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		2C8CE76B2D5B7484005C0046 /* ScreenFactory+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenFactory+Profile.swift"; sourceTree = "<group>"; };
 		2C91CFFF2D359578008D1376 /* ProfileModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProfileModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C91D0022D359578008D1376 /* ProfileModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileModule.h; sourceTree = "<group>"; };
 		2C91D0092D359598008D1376 /* ProfileServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceProtocol.swift; sourceTree = "<group>"; };
@@ -46,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C91D00D2D3595C0008D1376 /* Models.framework in Frameworks */,
+				2C8CE7672D5B3E28005C0046 /* AuthModule.framework in Frameworks */,
 				2C91D0672D3C196D008D1376 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +80,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C8CE7472D5AA859005C0046 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE7442D5AA859005C0046 /* ProfileCoordinator.swift */,
+				2C8CE7452D5AA859005C0046 /* ProfileCoordinatorProtocol.swift */,
+				2C8CE7462D5AA859005C0046 /* ProfileCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2C8CE7482D5AA859005C0046 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE74D2D5AA866005C0046 /* ScreenFactory */,
+				2C8CE7472D5AA859005C0046 /* Coordinator */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		2C8CE74D2D5AA866005C0046 /* ScreenFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE74E2D5B2E05005C0046 /* ScreenFactoryProtocol.swift */,
+				2C8CE76B2D5B7484005C0046 /* ScreenFactory+Profile.swift */,
+			);
+			path = ScreenFactory;
+			sourceTree = "<group>";
+		};
+		2C8CE7542D5B2EAE005C0046 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE75D2D5B38B5005C0046 /* EditProfile */,
+				2C8CE7572D5B2F16005C0046 /* Profile */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		2C8CE7572D5B2F16005C0046 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE7532D5B2EAE005C0046 /* ProfileView.swift */,
+				2C8CE7582D5B2F21005C0046 /* ProfileViewModel.swift */,
+				2C8CE75A2D5B2F4C005C0046 /* ProfileViewState.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2C8CE75D2D5B38B5005C0046 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE75E2D5B38C8005C0046 /* EditProfileViewState.swift */,
+				2C8CE7602D5B3951005C0046 /* EditProfileViewModel.swift */,
+				2C8CE7692D5B3E4B005C0046 /* EditProfileView.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		2C91CFF52D359578008D1376 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +157,8 @@
 		2C91D0012D359578008D1376 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CE7542D5B2EAE005C0046 /* Screen */,
+				2C8CE7482D5AA859005C0046 /* DI */,
 				2C91D0022D359578008D1376 /* ProfileModule.h */,
 				2C91D0092D359598008D1376 /* ProfileServiceProtocol.swift */,
 				2C5520852D4E84F900DA2F35 /* MockProfileService.swift */,
@@ -83,6 +169,7 @@
 		2C91D00B2D3595C0008D1376 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CE7662D5B3E28005C0046 /* AuthModule.framework */,
 				2C91D0662D3C196D008D1376 /* Core.framework */,
 				2C91D00C2D3595C0008D1376 /* Models.framework */,
 			);
@@ -170,7 +257,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8CE7612D5B3951005C0046 /* EditProfileViewModel.swift in Sources */,
+				2C8CE75F2D5B38C8005C0046 /* EditProfileViewState.swift in Sources */,
 				2C91D00A2D359598008D1376 /* ProfileServiceProtocol.swift in Sources */,
+				2C8CE7492D5AA859005C0046 /* ProfileCoordinator.swift in Sources */,
+				2C8CE74F2D5B2E05005C0046 /* ScreenFactoryProtocol.swift in Sources */,
+				2C8CE74A2D5AA859005C0046 /* ProfileCoordinatorProtocol.swift in Sources */,
+				2C8CE76A2D5B3E4B005C0046 /* EditProfileView.swift in Sources */,
+				2C8CE74B2D5AA859005C0046 /* ProfileCoordinatorView.swift in Sources */,
+				2C8CE75B2D5B2F4C005C0046 /* ProfileViewState.swift in Sources */,
+				2C8CE7552D5B2EAE005C0046 /* ProfileView.swift in Sources */,
+				2C8CE76C2D5B7484005C0046 /* ScreenFactory+Profile.swift in Sources */,
+				2C8CE7592D5B2F21005C0046 /* ProfileViewModel.swift in Sources */,
 				2C5520862D4E84F900DA2F35 /* MockProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
