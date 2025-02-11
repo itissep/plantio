@@ -8,7 +8,7 @@ public extension PUI {
         
         public var body: some View {
             ProgressView()
-                .tint(.red)
+                .tint(.pui.accent)
                 .frame(maxWidth: .infinity)
         }
     }
