@@ -10,7 +10,7 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack(spacing: PUI.Spacing.medium) {
-            Image.pui.iconCircle
+            Image.pui.iconRounded
                 .resizable()
                 .scaledToFit()
                 .frame(maxHeight: 100)

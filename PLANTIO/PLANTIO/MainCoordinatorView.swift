@@ -93,7 +93,7 @@ struct MainCoordinatorView: View {
 
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .clear
+        appearance.backgroundColor = UIColor(.pui.backgroundSecondary)
 
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = UITabBar.appearance().standardAppearance
