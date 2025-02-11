@@ -36,11 +36,10 @@ struct AppCoordinatorView: View {
             )
 
         case .main:
-            Text("MainCoordinatorView")
-//            MainCoordinatorView(
-//                factory: screenFactory,
-//                showAuthSceneHandler: { coordinator.handle(.showAuth) }
-//            )
+            MainCoordinatorView(
+                factory: screenFactory,
+                showAuthSceneHandler: { coordinator.handle(.showAuth) }
+            )
         }
     }
 }
