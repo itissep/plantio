@@ -1,4 +1,5 @@
 import Foundation
+import Models
 
 enum SortyType {
     case byDate
@@ -14,13 +15,17 @@ enum SortDirection {
 struct ProfileViewState: Equatable {
     // User Data
     var name = ""
+    var description = ""
     var avatarLink: String  = ""
     
     // TODO: add plants
+    var plants: [Plant] = [
+        .init(name: "some plant"), .init(name: "some plant"), .init(name: "some plant"), .init(name: "some plant"),
+    ]
     // TODO: add frinds
     
     // Service
-    var isUpdating = false
+    var isLoading = false
     var isAlertPresenting = false
     var errorMessage: String = ""
 }
