@@ -43,9 +43,15 @@ final class EditProfileViewModel: ViewModel {
 
         case .nameChanged(let name):
             state.name = name
+            
+        case .usernameChanged(let username):
+            usernameUpdated(username)
 
         case .onAlertPresented(let isPresented):
             state.isAlertPresenting = isPresented
+            
+        case .descriptionChanged(let description):
+            state.description = description
         }
 
         checkDataIsChange()
@@ -72,6 +78,13 @@ private extension EditProfileViewModel {
             handleError(error)
         }
     }
+    
+    func usernameUpdated(_ username: String) {
+        state.username = username
+
+       // TODO: username validation
+    }
+
 
     func emailUpdated(_ email: String) {
         state.email = email

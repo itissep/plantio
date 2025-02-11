@@ -11,63 +11,88 @@ public struct EditProfileView: View {
 
     public var body: some View {
         ScrollView {
-            VStack(spacing: Constants.contentSpacing) {
-                VStack {
-                    // TODO: add avatar image here
-
-                    Text(viewModel.state.username)
-                        .font(.title2)
-                        .bold()
-                }
-
-                VStack(spacing: Constants.formSpacing) {
-                    VStack {
-                        TextField("", text: email)
-                            .formItem()
-                            .errorFooter(
-                                message: viewModel.state.emailError,
-                                isShowed: viewModel.state.isEmailErrorShowing
-                            )
-                            .labeled("LocalizedKey.Profile.email")
-
-                        TextField("", text: avatarLink)
-                            .formItem()
-                            .errorFooter(
-                                message: viewModel.state.avatarLinkError,
-                                isShowed: viewModel.state.isAvatarLinkErrorShowing
-                            )
-                            .labeled("LocalizedKey.Profile.avatarLink")
+            VStack(spacing: PUI.Spacing.large) {
+                
+                Text("edit profile")
+                    .font(PUI.Font.title)
+                    .foregroundStyle(Color.pui.textPrimary)
+            
+                ZStack(alignment: .bottomTrailing) {
+                    AsyncImage(url: URL(string: viewModel.state.avatarLink)) { phase in
+                        switch phase {
+                        case .empty:
+                            ZStack {
+                                Color.pui.backgroundSecondary
+                                ProgressView()
+                                    .tint(Color.pui.accent)
+                            }
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFill()
+                        case .failure(_):
+                            ZStack {
+                                Color.pui.backgroundSecondary
+                                Image(systemName: "photo.fill")
+                                    .font(.title)
+                                    .tint(Color.pui.accent)
+                            }
+                        default:
+                            Color.pui.backgroundSecondary
+                        }
                     }
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-
-                    TextField("", text: name)
-                        .formItem()
-                        .labeled("LocalizedKey.Profile.name")
+                    .frame(width: 250, height: 250)
+                    .clipShape(Circle())
+                
+                    Button {
+                        viewModel.handle(.avatarLinkChanged("https://thumbs.dreamstime.com/b/cute-kitten-flowers-smelling-120490331.jpg"))
+                    } label: {
+                        Circle()
+                            .foregroundStyle(Color.pui.backgroundSecondary)
+                            .overlay {
+                                Image(systemName: "pencil")
+                                    .font(.title)
+                                    .foregroundStyle(Color.pui.accent)
+                            }
+                    }
+                    .buttonStyle(.plain)
+                    .frame(width: 50, height: 50)
+                    .padding(.trailing, PUI.Spacing.large)
+                    .padding(.bottom, PUI.Spacing.large)
                 }
-                .padding(.horizontal)
+                
+                TextField("type your name here", text: name)
+                    .formItem()
+                    .labeled("name")
+                
+                TextField("", text: username)
+                    .formItem()
+                    .labeled("username")
+                
+                TextField("", text: description)
+                    .formItem()
+                    .labeled("description")
 
                 if viewModel.state.isUpdating {
                     ProgressView()
                         .tint(Color.pui.accent)
                 } else {
                     VStack(spacing: Constants.buttonSpacing) {
-                        Button("LocalizedKey.Profile.save") {
+                        Button("save") {
                             viewModel.handle(.saveTapped)
                         }
                         .baseButtonStyle()
                         .disabled(viewModel.state.isSaveDisabled)
 
-                        Button("LocalizedKey.Profile.cancel") {
+                        Button("reset changes") {
                             viewModel.handle(.cancelTapped)
                         }
-                        .baseButtonStyle(isProminent: false)
+                        .inlineButtonStyle()
                         .disabled(!viewModel.state.isDataChanged)
                     }
-                    .padding()
                 }
             }
-            .padding(.top)
+            .padding(.all, PUI.Spacing.large)
         }
         .scrollIndicators(.hidden)
         .alert("LocalizedKey.ErrorMessage.error", isPresented: isAlertPresented) {
@@ -107,6 +132,20 @@ public struct EditProfileView: View {
         Binding(
             get: { viewModel.state.name },
             set: { viewModel.handle(.nameChanged($0)) }
+        )
+    }
+    
+    private var username: Binding<String> {
+        Binding(
+            get: { viewModel.state.username },
+            set: { viewModel.handle(.usernameChanged($0)) }
+        )
+    }
+    
+    private var description: Binding<String> {
+        Binding(
+            get: { viewModel.state.description },
+            set: { viewModel.handle(.descriptionChanged($0)) }
         )
     }
 

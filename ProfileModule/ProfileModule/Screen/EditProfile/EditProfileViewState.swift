@@ -4,7 +4,8 @@ struct EditProfileViewState: Equatable {
     var username = ""
     var email = ""
     var name = ""
-    var avatarLink: String  = ""
+    var description = ""
+    var avatarLink: String  = "https://i.pinimg.com/originals/fe/f8/7e/fef87efc5f2f87435fa3015dacff97c8.jpg"
     var newAvatarLink: String  = ""
 
     var emailError: String?
@@ -38,5 +39,7 @@ enum EditProfileViewEvent {
     case emailChanged(String)
     case avatarLinkChanged(String)
     case nameChanged(String)
+    case usernameChanged(String)
+    case descriptionChanged(String)
     case onAlertPresented(Bool)
 }
