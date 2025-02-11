@@ -103,11 +103,11 @@ enum PersonalInfoRegistrationViewEvent {
 }
 
 
-enum ValidationErrorHandler {
+public enum ValidationErrorHandler {
     
     #warning("TODO: move error descriptions to errors")
 
-    static func message(for error: Error) -> String {
+    public static func message(for error: Error) -> String {
         if let passwordError = error as? RegistrationValidationService.PasswordValidationError {
             return passwordMessage(passwordError)
         }

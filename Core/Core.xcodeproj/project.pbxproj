@@ -18,6 +18,7 @@
 		2C8CE6532D5A6C67005C0046 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE64C2D5A6C67005C0046 /* ScreenFactory.swift */; };
 		2C8CE6542D5A6C67005C0046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE6492D5A6C67005C0046 /* Coordinator.swift */; };
 		2C8CE6572D5A6CA8005C0046 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE6552D5A6CA8005C0046 /* ViewModel.swift */; };
+		2C8CE7652D5B3D2D005C0046 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CE7642D5B3D2D005C0046 /* URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		2C8CE64D2D5A6C67005C0046 /* AppServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
 		2C8CE64E2D5A6C67005C0046 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		2C8CE6552D5A6CA8005C0046 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2C8CE7642D5B3D2D005C0046 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		2C4F24672CDFD45A0046AA5F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CE7632D5B3D28005C0046 /* Extensions */,
 				2C8CE6562D5A6CA8005C0046 /* Protocols */,
 				2C4F24992CDFD7F00046AA5F /* DI */,
 				2C4F247F2CDFD5060046AA5F /* Networking */,
@@ -160,6 +163,14 @@
 				2C8CE6552D5A6CA8005C0046 /* ViewModel.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2C8CE7632D5B3D28005C0046 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C8CE7642D5B3D2D005C0046 /* URL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 				2C8CE6532D5A6C67005C0046 /* ScreenFactory.swift in Sources */,
 				2C8CE6542D5A6C67005C0046 /* Coordinator.swift in Sources */,
 				2C4F246A2CDFD45A0046AA5F /* Core.docc in Sources */,
+				2C8CE7652D5B3D2D005C0046 /* URL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

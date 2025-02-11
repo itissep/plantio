@@ -30,7 +30,7 @@ public final class RegistrationValidationService {
     
     public init() { }
 
-    func validate(email: String) throws {
+    public func validate(email: String) throws {
         guard isValidUsername(email) else {
             throw EmailValidationError.invalidUsername
         }
@@ -48,13 +48,13 @@ public final class RegistrationValidationService {
         }
     }
 
-    func validate(password: String) throws {
+    public func validate(password: String) throws {
         guard password.count >= Constants.minPasswordLength else {
             throw PasswordValidationError.invalidPassword
         }
     }
 
-    func validate(username: String) throws {
+    public func validate(username: String) throws {
         let usernamePredicate = NSPredicate(
             format: Constants.formatString,
             Constants.regex
