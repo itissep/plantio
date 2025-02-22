@@ -4,9 +4,10 @@ public struct Post: Equatable {
     public let id: String
     public let title: String
     public let text: String
+    public let createdAt: Date
 
-    public let userId: String
-    public let plantId: String
+    public let user: UserProfile
+    public let plant: Plant
 
     public let likesUsers: [UserProfile]
     public let imagesURLs: [String]
@@ -15,18 +16,20 @@ public struct Post: Equatable {
         id: String,
         title: String,
         text: String,
-        userId: String,
-        plantId: String,
+        user: UserProfile,
+        plant: Plant,
         likesUsers: [UserProfile],
-        imagesURLs: [String]
+        imagesURLs: [String],
+        createdAt: Date
     ) {
         self.id = id
         self.title = title
         self.text = text
-        self.userId = userId
-        self.plantId = plantId
+        self.user = user
+        self.plant = plant
         self.likesUsers = likesUsers
         self.imagesURLs = imagesURLs
+        self.createdAt = createdAt
     }
 }
 
@@ -36,10 +39,11 @@ public extension Post {
             id: UUID().uuidString,
             title: "Post Title",
             text: "post text post text post text post text post text post text post textpost text post text post text post text post text",
-            userId: UUID().uuidString,
-            plantId: UUID().uuidString,
+            user: UserProfile.mock,
+            plant: Plant.mock,
             likesUsers: [],
-            imagesURLs: ["https://i.pinimg.com/originals/fe/f8/7e/fef87efc5f2f87435fa3015dacff97c8.jpg"]
+            imagesURLs: ["https://i.pinimg.com/originals/fe/f8/7e/fef87efc5f2f87435fa3015dacff97c8.jpg"],
+            createdAt: .now
         )
     }
 }

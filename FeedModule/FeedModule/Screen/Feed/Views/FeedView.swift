@@ -12,6 +12,7 @@ public struct FeedView: View {
     public var body: some View {
         VStack(spacing: PUI.Spacing.large) {
             HStack(spacing: PUI.Spacing.medium) {
+                
                 Spacer()
                 PUI.IconButton(Image(systemName: "square.and.pencil")) {
                     viewModel.handle(.onAddPostTapped)
@@ -22,7 +23,10 @@ public struct FeedView: View {
                     Text("nothing yet")
                 } else {
                     ForEach(viewModel.state.posts, id: \.id) { post in
-                        PostView(post: post)
+                        PostView(model: post)
+                            .onTapGesture {
+                                viewModel.handle(.onPostSelectWithId(post.id))
+                            }
                     }
                 }
             }

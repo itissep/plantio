@@ -24,3 +24,16 @@ public struct Plant: PlantlyModel, Equatable {
         self.description = description
     }
 }
+
+public extension Plant {
+    static var mock: Plant {
+        .init(
+            id: UUID().uuidString,
+            name: "some plant",
+            mainImageUrl: "https://i.pinimg.com/originals/fe/f8/7e/fef87efc5f2f87435fa3015dacff97c8.jpg",
+            createdDate: .now,
+            plantDate: .now,
+            description: "beautiful one"
+        )
+    }
+}

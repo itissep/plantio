@@ -34,7 +34,7 @@ struct MainCoordinatorView: View {
         }
     }
 
-    @State private var selectedTab = Tab.profile
+    @State private var selectedTab = Tab.feed
 
     private let factory: ScreenFactory
 

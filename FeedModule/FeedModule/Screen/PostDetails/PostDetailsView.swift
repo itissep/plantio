@@ -18,7 +18,7 @@ public struct PostDetailsView: View {
                 }
             }
             ScrollView {
-                PostView(post: viewModel.state.post)
+                PostView(model: viewModel.state.post)
                 
                 if viewModel.state.comments.isEmpty {
                     Text("nothing yet")

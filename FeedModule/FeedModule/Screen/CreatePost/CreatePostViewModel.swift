@@ -26,10 +26,11 @@ final class CreatePostViewModel: ViewModel {
                     id: UUID().uuidString,
                     title: state.title,
                     text: state.text,
-                    userId: UUID().uuidString, // TODO: change this
-                    plantId: "",
+                    user: UserProfile.mock, // TODO: change this
+                    plant: Plant.mock, // TODO: change this
                     likesUsers: [],
-                    imagesURLs: [] // state.images
+                    imagesURLs: [], // TODO: state.images,
+                    createdAt: .now
                 )) { error in
                     if let error {
 //                        self.state.
