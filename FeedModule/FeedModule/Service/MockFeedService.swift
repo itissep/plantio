@@ -15,10 +15,10 @@ public class MockFeedService: FeedServiceProtocol {
     }
     
     public func getComments(for postId: String) -> [Comment] {
-        [Comment.mock]
+        [Comment.mock, Comment.mock, Comment.mock, Comment.mock, Comment.mock]
     }
     
     public func getPosts() -> [Post] {
-        [Post.mock]
+        [Post.mock, Post.mock, Post.mock, Post.mock, Post.mock]
     }
 }

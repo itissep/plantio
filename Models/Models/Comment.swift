@@ -5,17 +5,20 @@ public struct Comment: Equatable {
     public let text: String
     public let user: UserProfile
     public let post: Post?
+    public let createdAt: Date
     
     public init(
         id: String,
         text: String,
         user: UserProfile,
-        post: Post?
+        post: Post?,
+        createdDate: Date
     ) {
         self.id = id
         self.text = text
         self.user = user
         self.post = post
+        self.createdAt = createdDate
     }
 }
 
@@ -24,13 +27,9 @@ public extension Comment {
         .init(
             id: UUID().uuidString,
             text: "comment text",
-            user: UserProfile(
-                id: UUID().uuidString,
-                nickName: "someone",
-                name: "someone",
-                email: ""
-            ),
-            post: nil
+            user: UserProfile.mock,
+            post: nil,
+            createdDate: .now
         )
     }
 }

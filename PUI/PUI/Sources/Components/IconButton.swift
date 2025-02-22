@@ -16,12 +16,12 @@ public extension PUI {
             } label: {
                 icon
                     .foregroundStyle(Color.pui.accent)
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                     .bold()
                     .background {
                         Circle()
                             .foregroundStyle(Color.pui.backgroundSecondary)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 40, height: 40)
                         
                     }
             }.frame(width: 50, height: 50)
