@@ -3,6 +3,7 @@ import Core
 import PUI
 import ProfileModule
 import FeedModule
+import PlantClassifierModule
 
 struct MainCoordinatorView: View {
 
@@ -28,7 +29,7 @@ struct MainCoordinatorView: View {
             case .plants: "plants"
             case .feed: "feed"
             case .profile: "profile"
-            case .identifier: "identifier"
+            case .identifier: "classifier"
             case .settings: "settings"
             }
         }
@@ -40,10 +41,9 @@ struct MainCoordinatorView: View {
 
     private let profileCoordinator: ProfileCoordinator
     private let feedCoordinator: FeedCoordinator
+    private let classifierCoordinator: ClassifierCoordinator
     
-    // TODO: add Feed coordinator
     // TODO: add Plants coordinator
-    // TODO: add Identifier coordinator
     // TODO: add Settings coordinator
 
     init(factory: ScreenFactory, showAuthSceneHandler: @escaping () -> Void) {
@@ -51,6 +51,7 @@ struct MainCoordinatorView: View {
         
         profileCoordinator = .init(showAuthSceneHandler: showAuthSceneHandler)
         feedCoordinator = .init()
+        classifierCoordinator = .init()
     }
 
     var body: some View {
@@ -67,7 +68,7 @@ struct MainCoordinatorView: View {
                 }
                 .tag(Tab.plants)
             
-            Text("Identifier")
+            ClassifierCoordinatorView(classifierCoordinator, factory: factory)
                 .tabItem {
                     Label(Tab.identifier.title, systemImage: Tab.identifier.icon)
                 }
