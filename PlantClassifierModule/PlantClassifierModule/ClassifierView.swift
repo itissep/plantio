@@ -17,6 +17,10 @@ public struct ClassifierView: View {
     
     public var body: some View {
         VStack {
+            Text("Plant Classifier")
+                .font(PUI.Font.title)
+                .foregroundStyle(Color.pui.accent)
+                .padding(.bottom, PUI.Spacing.large)
             Group {
                 if viewModel.selectedImage != nil {
                     Image(uiImage: viewModel.selectedImage!)
@@ -50,6 +54,7 @@ public struct ClassifierView: View {
                 photoLibrary: .shared()
             ) { Text("pick new image") }
                 .baseButtonStyle()
+                .frame(width: 300)
                 .onChange(of: selectedItem) { _, newItem in
                     viewModel.isLoading = true
                     Task {
@@ -63,6 +68,7 @@ public struct ClassifierView: View {
                 .baseButtonStyle()
                 .disabled(viewModel.selectedImage == nil)
                 .padding(.bottom, PUI.Spacing.large)
+                .frame(width: 300)
             
             Group {
                 if !viewModel.predictionsTop3.isEmpty {
@@ -78,8 +84,9 @@ public struct ClassifierView: View {
                     }
                 } else {
                     HStack {
-                        Image(systemName: "circle.square.fill")
-                            .font(.system(size: 42))
+                        Image.pui.iconRounded
+                            .resizable()
+                            .frame(width: 42, height: 42)
                         Spacer()
                         Text("your plant prediction is going to be here")
                             .monospaced()
@@ -92,13 +99,6 @@ public struct ClassifierView: View {
             .foregroundStyle(Color.pui.accent)
             .monospaced()
         }
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Text("Plant Classifier")
-                    .font(PUI.Font.title)
-                    .foregroundStyle(Color.pui.accent)
-            }
-        }
     }
     
     private var loader: some View {
@@ -106,8 +106,9 @@ public struct ClassifierView: View {
             .foregroundStyle(Color.pui.accent)
             .frame(width: 300, height: 300)
             .overlay {
-                Image(systemName: "circle.square.fill")
-                    .font(.system(size: 40))
+                Image.pui.iconRounded
+                    .resizable()
+                    .frame(width: 40, height: 40)
                     .foregroundStyle(Color.pui.backgroundPrimary)
                     .rotationEffect(.degrees(isLoaderAnimating ? 360 : 0))
                     .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false), value: isLoaderAnimating)
