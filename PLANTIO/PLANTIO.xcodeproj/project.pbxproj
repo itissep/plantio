@@ -15,6 +15,14 @@
 		2C8CE6452D5A6AD1005C0046 /* ProfileModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8CE6432D5A6AD1005C0046 /* ProfileModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C8CE6472D5A6ADF005C0046 /* PUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8CE6462D5A6ADF005C0046 /* PUI.framework */; };
 		2C8CE6482D5A6ADF005C0046 /* PUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8CE6462D5A6ADF005C0046 /* PUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2CF3B5962D6A149200731684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3B5902D6A149200731684 /* Assets.xcassets */; };
+		2CF3B5982D6A149200731684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3B5922D6A149200731684 /* LaunchScreen.storyboard */; };
+		2CF3B5992D6A149200731684 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B58E2D6A149200731684 /* AppCoordinator.swift */; };
+		2CF3B59A2D6A149200731684 /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B58F2D6A149200731684 /* AppCoordinatorView.swift */; };
+		2CF3B59B2D6A149200731684 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B5932D6A149200731684 /* MainCoordinatorView.swift */; };
+		2CF3B59C2D6A149200731684 /* PLANTIOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B5942D6A149200731684 /* PLANTIOApp.swift */; };
+		2CF3B5A42D6A162300731684 /* FeedModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B5A32D6A162300731684 /* FeedModule.framework */; };
+		2CF3B5A52D6A162300731684 /* FeedModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B5A32D6A162300731684 /* FeedModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +32,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2CF3B5A52D6A162300731684 /* FeedModule.framework in Embed Frameworks */,
 				2C8CE6422D5A6ACC005C0046 /* AuthModule.framework in Embed Frameworks */,
 				2C8CE63E2D5A6AC8005C0046 /* Core.framework in Embed Frameworks */,
 				2C8CE6452D5A6AD1005C0046 /* ProfileModule.framework in Embed Frameworks */,
@@ -41,34 +50,23 @@
 		2C8CE6432D5A6AD1005C0046 /* ProfileModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProfileModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8CE6462D5A6ADF005C0046 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8CE72A2D5AA7A0005C0046 /* ProfileModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProfileModule.xcodeproj; path = ../ProfileModule/ProfileModule.xcodeproj; sourceTree = "<group>"; };
+		2CF3B58E2D6A149200731684 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2CF3B58F2D6A149200731684 /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		2CF3B5902D6A149200731684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CF3B5912D6A149200731684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF3B5922D6A149200731684 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CF3B5932D6A149200731684 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		2CF3B5942D6A149200731684 /* PLANTIOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLANTIOApp.swift; sourceTree = "<group>"; };
+		2CF3B5A02D6A149C00731684 /* FeedModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeedModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF3B5A32D6A162300731684 /* FeedModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeedModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2C8CE7862D5BB5D0005C0046 /* Exceptions for "PLANTIO" folder in "PLANTIO" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 2C8CE60B2D5A68D6005C0046 /* PLANTIO */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2C8CE60E2D5A68D6005C0046 /* PLANTIO */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2C8CE7862D5BB5D0005C0046 /* Exceptions for "PLANTIO" folder in "PLANTIO" target */,
-			);
-			path = PLANTIO;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C8CE6092D5A68D6005C0046 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF3B5A42D6A162300731684 /* FeedModule.framework in Frameworks */,
 				2C8CE6412D5A6ACC005C0046 /* AuthModule.framework in Frameworks */,
 				2C8CE63D2D5A6AC8005C0046 /* Core.framework in Frameworks */,
 				2C8CE6442D5A6AD1005C0046 /* ProfileModule.framework in Frameworks */,
@@ -82,7 +80,7 @@
 		2C8CE6032D5A68D6005C0046 = {
 			isa = PBXGroup;
 			children = (
-				2C8CE60E2D5A68D6005C0046 /* PLANTIO */,
+				2CF3B5952D6A149200731684 /* PLANTIO */,
 				2C8CE63B2D5A6AC8005C0046 /* Frameworks */,
 				2C8CE60D2D5A68D6005C0046 /* Products */,
 			);
@@ -99,6 +97,8 @@
 		2C8CE63B2D5A6AC8005C0046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CF3B5A32D6A162300731684 /* FeedModule.framework */,
+				2CF3B5A02D6A149C00731684 /* FeedModule.framework */,
 				2C8CE72A2D5AA7A0005C0046 /* ProfileModule.xcodeproj */,
 				2C8CE6462D5A6ADF005C0046 /* PUI.framework */,
 				2C8CE6432D5A6AD1005C0046 /* ProfileModule.framework */,
@@ -113,6 +113,20 @@
 			children = (
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2CF3B5952D6A149200731684 /* PLANTIO */ = {
+			isa = PBXGroup;
+			children = (
+				2CF3B58E2D6A149200731684 /* AppCoordinator.swift */,
+				2CF3B58F2D6A149200731684 /* AppCoordinatorView.swift */,
+				2CF3B5902D6A149200731684 /* Assets.xcassets */,
+				2CF3B5912D6A149200731684 /* Info.plist */,
+				2CF3B5922D6A149200731684 /* LaunchScreen.storyboard */,
+				2CF3B5932D6A149200731684 /* MainCoordinatorView.swift */,
+				2CF3B5942D6A149200731684 /* PLANTIOApp.swift */,
+			);
+			path = PLANTIO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,9 +144,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2C8CE60E2D5A68D6005C0046 /* PLANTIO */,
 			);
 			name = PLANTIO;
 			packageProductDependencies = (
@@ -186,6 +197,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF3B5962D6A149200731684 /* Assets.xcassets in Resources */,
+				2CF3B5982D6A149200731684 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF3B5992D6A149200731684 /* AppCoordinator.swift in Sources */,
+				2CF3B59A2D6A149200731684 /* AppCoordinatorView.swift in Sources */,
+				2CF3B59B2D6A149200731684 /* MainCoordinatorView.swift in Sources */,
+				2CF3B59C2D6A149200731684 /* PLANTIOApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

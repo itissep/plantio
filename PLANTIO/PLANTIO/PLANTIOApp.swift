@@ -1,6 +1,7 @@
 import Core
 import AuthModule
 import ProfileModule
+import FeedModule
 import SwiftUI
 
 @main
@@ -12,6 +13,7 @@ struct PLANTIOApp: App {
         
         appServiceLocator.register(MockAuthService() as AuthServiceProtocol)
         appServiceLocator.register(MockProfileService() as ProfileServiceProtocol)
+        appServiceLocator.register(MockFeedService() as FeedServiceProtocol)
         appServiceLocator.register(RegistrationValidationService())
         
         self.serviceLocator = appServiceLocator

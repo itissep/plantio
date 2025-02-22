@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FeedModule/FeedModule.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PLANTIO/PLANTIO.xcodeproj">
    </FileRef>
    <FileRef

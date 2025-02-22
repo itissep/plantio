@@ -2,6 +2,7 @@ import SwiftUI
 import Core
 import PUI
 import ProfileModule
+import FeedModule
 
 struct MainCoordinatorView: View {
 
@@ -38,6 +39,7 @@ struct MainCoordinatorView: View {
     private let factory: ScreenFactory
 
     private let profileCoordinator: ProfileCoordinator
+    private let feedCoordinator: FeedCoordinator
     
     // TODO: add Feed coordinator
     // TODO: add Plants coordinator
@@ -48,11 +50,12 @@ struct MainCoordinatorView: View {
         self.factory = factory
         
         profileCoordinator = .init(showAuthSceneHandler: showAuthSceneHandler)
+        feedCoordinator = .init()
     }
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Feed")
+            FeedCoordinatorView(feedCoordinator, factory: factory)
                 .tabItem {
                     Label(Tab.feed.title, systemImage: Tab.feed.icon)
                 }
