@@ -1,6 +1,6 @@
 import Foundation
 
-public struct UserProfile: PlantlyModel {
+public struct UserProfile: Equatable {
     public let id: String
     public let nickName: String
     public let name: String

@@ -14,6 +14,7 @@
 		2C525B972CE69E1100A0B14C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C525B962CE69E1100A0B14C /* Post.swift */; };
 		2C91CFB02D34542B008D1376 /* ShelfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CFAF2D34542B008D1376 /* ShelfModel.swift */; };
 		2C91CFCD2D346592008D1376 /* PlantlyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C91CFCC2D346592008D1376 /* PlantlyModel.swift */; };
+		2CF3B57A2D6A032200731684 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B5792D6A032200731684 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2C525B962CE69E1100A0B14C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2C91CFAF2D34542B008D1376 /* ShelfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfModel.swift; sourceTree = "<group>"; };
 		2C91CFCC2D346592008D1376 /* PlantlyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantlyModel.swift; sourceTree = "<group>"; };
+		2CF3B5792D6A032200731684 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2C91CFCC2D346592008D1376 /* PlantlyModel.swift */,
 				2C525B942CE69DFA00A0B14C /* Plant.swift */,
 				2C525B962CE69E1100A0B14C /* Post.swift */,
+				2CF3B5792D6A032200731684 /* Comment.swift */,
 				2C91CFAF2D34542B008D1376 /* ShelfModel.swift */,
 				2C525B802CE6913100A0B14C /* Models.docc */,
 			);
@@ -150,6 +153,7 @@
 				2C525B892CE6915D00A0B14C /* UserProfile.swift in Sources */,
 				2C91CFCD2D346592008D1376 /* PlantlyModel.swift in Sources */,
 				2C525B952CE69DFA00A0B14C /* Plant.swift in Sources */,
+				2CF3B57A2D6A032200731684 /* Comment.swift in Sources */,
 				2C91CFB02D34542B008D1376 /* ShelfModel.swift in Sources */,
 				2C525B812CE6913100A0B14C /* Models.docc in Sources */,
 				2C525B972CE69E1100A0B14C /* Post.swift in Sources */,
