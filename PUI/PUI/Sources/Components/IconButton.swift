@@ -17,14 +17,13 @@ public extension PUI {
                 icon
                     .foregroundStyle(Color.pui.accent)
                     .font(.system(size: 20))
-                    .bold()
+                    .frame(width: 20, height: 20)
                     .background {
-                        Circle()
+                        RoundedRectangle(cornerRadius: PUI.Constant.cornerRadius)
                             .foregroundStyle(Color.pui.backgroundSecondary)
                             .frame(width: 40, height: 40)
-                        
                     }
-            }.frame(width: 50, height: 50)
+            }.frame(width: 40, height: 40)
         }
     }
 }

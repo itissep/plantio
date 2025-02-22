@@ -12,20 +12,6 @@ public struct ProfileView: View {
     public var body: some View {
         ScrollView {
             VStack(spacing: PUI.Spacing.large) {
-                HStack(spacing: PUI.Spacing.medium) {
-                    PUI.IconButton(Image(systemName: "person.2.badge.plus.fill")) {
-                        viewModel.handle(.onAddFriendsTapped)
-                    }
-                    Spacer()
-                    PUI.IconButton(Image(systemName: "pencil")) {
-                        viewModel.handle(.onEditProfileTapped)
-                    }
-                    
-                    PUI.IconButton(Image(systemName: "square.and.arrow.up.fill")) {
-                        viewModel.handle(.onShareButtonTapped)
-                    }
-                }
-                
                 VStack(spacing: PUI.Spacing.medium) {
                     PUI.Picture(URL(string: viewModel.state.avatarLink))
                         .frame(width: 100, height: 100)
@@ -53,6 +39,33 @@ public struct ProfileView: View {
             }
         }
         .scrollIndicators(.hidden)
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                PUI.IconButton(Image(systemName: "person.2.badge.plus.fill")) {
+                    viewModel.handle(.onAddFriendsTapped)
+                }
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Profile")
+                    .font(PUI.Font.title)
+                    .foregroundStyle(Color.pui.accent)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                HStack(spacing: PUI.Spacing.medium) {
+                    PUI.IconButton(Image(systemName: "pencil")) {
+                        viewModel.handle(.onEditProfileTapped)
+                    }
+                    
+                    PUI.IconButton(Image(systemName: "square.and.arrow.up.fill")) {
+                        viewModel.handle(.onShareButtonTapped)
+                    }
+                }
+            }
+        }
         .padding(.horizontal, PUI.Spacing.large)
         .onAppear { viewModel.handle(.onAppear) }
     }

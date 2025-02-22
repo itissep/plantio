@@ -29,8 +29,6 @@ struct PostView: View {
             
             Text(model.text)
                 .foregroundStyle(Color.pui.textPrimary)
-        
-            
         }
         .padding(PUI.Spacing.large)
         .background {

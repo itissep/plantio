@@ -32,7 +32,7 @@ public struct PostDetailsView: View {
             }
         }.toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Comments")
+                Text("Post")
                     .font(PUI.Font.title)
                     .foregroundStyle(Color.pui.accent)
             }

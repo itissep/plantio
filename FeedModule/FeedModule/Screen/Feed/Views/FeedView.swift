@@ -39,6 +39,7 @@ public struct FeedView: View {
                 }
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
         .scrollIndicators(.hidden)
         .padding(.horizontal, PUI.Spacing.large)
         .onAppear { viewModel.handle(.onAppear) }
