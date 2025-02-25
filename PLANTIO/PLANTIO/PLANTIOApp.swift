@@ -1,5 +1,6 @@
 import Core
 import AuthModule
+import PlantsModule
 import ProfileModule
 import FeedModule
 import PlantClassifierModule
@@ -14,6 +15,7 @@ struct PLANTIOApp: App {
         
         appServiceLocator.register(MockAuthService() as AuthServiceProtocol)
         appServiceLocator.register(MockProfileService() as ProfileServiceProtocol)
+        appServiceLocator.register(MockPlantService() as PlantServiceProtocol)
         appServiceLocator.register(MockFeedService() as FeedServiceProtocol)
         appServiceLocator.register(RegistrationValidationService())
         appServiceLocator.register(ClassifierViewModel()) // TODO: separate ViewModel and Service later

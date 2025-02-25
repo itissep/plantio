@@ -1,6 +1,7 @@
 import SwiftUI
 import Core
 import PUI
+import PlantsModule
 import ProfileModule
 import FeedModule
 import PlantClassifierModule
@@ -42,6 +43,7 @@ struct MainCoordinatorView: View {
     private let profileCoordinator: ProfileCoordinator
     private let feedCoordinator: FeedCoordinator
     private let classifierCoordinator: ClassifierCoordinator
+    private let plantsCoordinator: PlantCoordinator
     
     // TODO: add Plants coordinator
     // TODO: add Settings coordinator
@@ -52,6 +54,7 @@ struct MainCoordinatorView: View {
         profileCoordinator = .init(showAuthSceneHandler: showAuthSceneHandler)
         feedCoordinator = .init()
         classifierCoordinator = .init()
+        plantsCoordinator = .init()
     }
 
     var body: some View {
@@ -62,7 +65,7 @@ struct MainCoordinatorView: View {
                 }
                 .tag(Tab.feed)
             
-            Text("Plants")
+            PlantCoordinatorView(plantsCoordinator, factory: factory)
                 .tabItem {
                     Label(Tab.plants.title, systemImage: Tab.plants.icon)
                 }

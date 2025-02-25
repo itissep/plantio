@@ -27,6 +27,8 @@
 		2CF3B6122D6A4FFD00731684 /* PlantClassifierModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B6102D6A4FFD00731684 /* PlantClassifierModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CF3B6D92D6B883F00731684 /* PlantioStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2CF3B6D22D6B883D00731684 /* PlantioStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CF3B6E32D6B885000731684 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3B6E02D6B885000731684 /* Stickers.xcassets */; };
+		2CF3B6E72D6E459300731684 /* PlantsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B6E62D6E459300731684 /* PlantsModule.framework */; };
+		2CF3B6E82D6E459300731684 /* PlantsModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B6E62D6E459300731684 /* PlantsModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2CF3B6E82D6E459300731684 /* PlantsModule.framework in Embed Frameworks */,
 				2CF3B5A52D6A162300731684 /* FeedModule.framework in Embed Frameworks */,
 				2C8CE6422D5A6ACC005C0046 /* AuthModule.framework in Embed Frameworks */,
 				2C8CE63E2D5A6AC8005C0046 /* Core.framework in Embed Frameworks */,
@@ -90,6 +93,7 @@
 		2CF3B6D22D6B883D00731684 /* PlantioStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlantioStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF3B6DF2D6B885000731684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF3B6E02D6B885000731684 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		2CF3B6E62D6E459300731684 /* PlantsModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PlantsModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF3B6E72D6E459300731684 /* PlantsModule.framework in Frameworks */,
 				2CF3B5A42D6A162300731684 /* FeedModule.framework in Frameworks */,
 				2C8CE6412D5A6ACC005C0046 /* AuthModule.framework in Frameworks */,
 				2C8CE63D2D5A6AC8005C0046 /* Core.framework in Frameworks */,
@@ -131,6 +136,7 @@
 		2C8CE63B2D5A6AC8005C0046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CF3B6E62D6E459300731684 /* PlantsModule.framework */,
 				2CF3B6102D6A4FFD00731684 /* PlantClassifierModule.framework */,
 				2CF3B5F02D6A4F7300731684 /* libPlantRecognizerModule.a */,
 				2CF3B5A32D6A162300731684 /* FeedModule.framework */,
