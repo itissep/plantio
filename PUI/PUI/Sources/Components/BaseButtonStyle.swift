@@ -4,7 +4,13 @@ public extension PUI {
     struct BaseButtonStyle: ButtonStyle {
 
         let isProminent: Bool
+        let color: Color
         @Environment(\.isEnabled) var isEnabled: Bool
+        
+        public init(isProminent: Bool, color: Color = .pui.accent) {
+            self.isProminent = isProminent
+            self.color = color
+        }
 
         public func makeBody(configuration: Configuration) -> some View {
             configuration.label
@@ -12,7 +18,7 @@ public extension PUI {
                 .foregroundStyle(isEnabled ? Color.pui.backgroundPrimary : Color.pui.textPrimary)
                 .frame(maxWidth: .infinity)
                 .frame(height: 42)
-                .background(isProminent ? Color.pui.accent : Color.pui.accentButton)
+                .background(isProminent ? color : Color.pui.accentButton)
                 .clipShape(.rect(cornerRadius: PUI.Constant.cornerRadius))
                 .opacity(configuration.isPressed ? Constants.opacityPressed : opacity)
         }
