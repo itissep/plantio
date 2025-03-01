@@ -36,7 +36,7 @@ struct MainCoordinatorView: View {
         }
     }
 
-    @State private var selectedTab = Tab.feed
+    @State private var selectedTab = Tab.plants
 
     private let factory: ScreenFactory
 
@@ -44,8 +44,7 @@ struct MainCoordinatorView: View {
     private let feedCoordinator: FeedCoordinator
     private let classifierCoordinator: ClassifierCoordinator
     private let plantsCoordinator: PlantCoordinator
-    
-    // TODO: add Plants coordinator
+
     // TODO: add Settings coordinator
 
     init(factory: ScreenFactory, showAuthSceneHandler: @escaping () -> Void) {
