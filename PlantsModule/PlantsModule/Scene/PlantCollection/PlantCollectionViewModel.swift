@@ -1,109 +1,16 @@
 import Foundation
 import Core
 import Models
-
-
-// Модель данных для графика
-
-
-
-extension Date {
-    init?(day: Int, month: Int, year: Int) {
-        var components = DateComponents()
-        components.day = day
-        components.month = month
-        components.year = year
-        
-        guard let date = Calendar.current.date(from: components) else {
-            return nil
-        }
-        
-        self = date
-    }
-    
-    static func date(day: Int, month: Int, year: Int) -> Date? {
-        var components = DateComponents()
-        components.day = day
-        components.month = month
-        components.year = year
-        
-        return Calendar.current.date(from: components)
-    }
-    
-    func isMonday() -> Bool {
-        let calendar = Calendar.current
-        let weekday = calendar.component(.weekday, from: self)
-        
-        // В Gregorian календаре понедельник — это 2, если неделя начинается с воскресенья.
-        return weekday == 2
-    }
-}
-
-// Функция для генерации массива дат
-func generateDates(forLastDays: Int = 365) -> [Date] {
-    var dates: [Date] = []
-    let calendar = Calendar.current
-    
-    let now = Date()
-    var date = now
-    
-    // Генерируем даты за последние 365 дней
-    for _ in 1...forLastDays {
-        dates.append(date)
-        
-        // Переходим к предыдущему дню
-        guard let newDate = calendar.date(byAdding: .day, value: -1, to: date) else { break }
-        date = newDate
-    }
-    
-    return dates.reversed()
-}
-
-// Функция для разбиения дат на недели
-func splitDatesIntoWeeks(dates: [Date]) -> [[Date]] {
-    var weeks: [[Date]] = []
-    let calendar = Calendar.current
-    
-    var currentWeek: [Date] = []
-    var currentWeekStart: Date?
-    
-    for date in dates {
-        // Определяем начало недели для текущей даты
-        var components = calendar.dateComponents([.year, .weekOfYear], from: date)
-        components.weekday = 1 // Понедельник
-        if let weekStart = calendar.date(from: components) {
-            if currentWeekStart == nil || weekStart != currentWeekStart {
-                // Если это начало новой недели, добавляем предыдущую неделю в результат
-                if !currentWeek.isEmpty {
-                    weeks.append(currentWeek)
-                }
-                currentWeek = []
-                currentWeekStart = weekStart
-            }
-        }
-        
-        currentWeek.append(date)
-    }
-    
-    // Добавляем последнюю неделю в результат
-    if !currentWeek.isEmpty {
-        weeks.append(currentWeek)
-    }
-    
-    return weeks
-}
-
-// Генерируем и разбиваем даты на недели
-let dates = generateDates()
-let weeks = splitDatesIntoWeeks(dates: dates)
-
+import PUI // TODO: remove this later
 
 struct PlantCollectionViewState: Equatable {
     // TODO: add plants
-    var plants: [Plant] = [
-        .init(name: "some plant"), .init(name: "some plant"), .init(name: "some plant"), .init(name: "some plant"),
-    ]
     // TODO: add frinds
+    
+    var plants: [Plant] = []
+    var selectedPlant: Plant? = nil
+    var plantEvents: [EventTimetableViewModel] = []
+    var plantPhotos: [String] = []
     
     // Service
     var isLoading = false
@@ -115,7 +22,6 @@ enum PlantCollectionViewEvent {
     case onAppear
     case onAlertPresented(Bool)
     
-    case onEditPlantsTapped
     case onAddPlantTapped
     
     case onPlantSelectWithId(String)
@@ -141,45 +47,121 @@ final class PlantCollectionViewModel: ViewModel {
     func handle(_ event: PlantCollectionViewEvent) {
         switch event {
         case .onAppear:
-//            Task { await retrieveProfile() }
-            print("wow")
-        case .onAlertPresented(_):
-            print("wow")
+            state.isLoading = true
+            updatePlants()
+            state.isLoading = false
+        case .onAlertPresented(let errorMessage):
+            print("[ERROR] \(errorMessage)")
         case .onAddPlantTapped:
             print("wow")
-        case .onPlantSelectWithId(_):
-            print("wow")
-        case .onEditPlantsTapped:
-            print("wow")
-            //
+        case .onPlantSelectWithId(let selectedId):
+            state.isLoading = true
+            state.selectedPlant = state.plants.first(where: { $0.id == selectedId})
+            updateEvents(for: selectedId)
+            updatePhotos(for: selectedId)
+            state.isLoading = false
+        }
+    }
+    
+    private func updatePlants() {
+        plantService.fetchPlants { [weak self] plants, error in
+            self?.state.plants = plants
+        }
+    }
+    
+    private func updateEvents(for plantId: String) {
+        plantService.getEvents(for: plantId) { [weak self] events, error in
+            guard let self else {
+                return
+            }
+            
+            let weeks: [WeekModel] = splitDatesIntoWeeks(dates: generateDates().reversed()).map { week in
+                WeekModel(days: week.map { date in
+                    DayModel(
+                        date: date,
+                        isWatered: events.contains(where: { Date.isOneDay($0.createdAt, secondDate: date) })
+                    )
+                })
+            }
+            state.plantEvents = [.init(
+                color: .pui.accent,
+                title: "watering",
+                weeks: weeks,
+                actionTitle: "water me",
+                onActionTap: { [weak self] in
+                    self?.createNewEvent()
+                }
+            )]
+        }
+    }
+    
+    private func updatePhotos(for plantId: String) {
+        plantService.getPhotos(for: plantId) { [weak self] photos, error in
+            self?.state.plantPhotos = photos
+        }
+    }
+    
+    private func createNewEvent() {
+        if let plant = state.selectedPlant {
+            let newEvent = Models.Event(id: UUID().uuidString, note: "", plant: plant, createdAt: .now)
+            plantService.newEvent(newEvent) { error in
+                if let error {
+                    state.errorMessage = error.localizedDescription
+                }
+            }
         }
     }
 }
 
 private extension PlantCollectionViewModel {
+    func generateDates(forLastDays: Int = 365) -> [Date] {
+        var dates: [Date] = []
+        let calendar = Calendar.current
+        
+        let now = Date()
+        var date = now
+        
+        for _ in 1...forLastDays {
+            dates.append(date)
+            
+            guard let newDate = calendar.date(byAdding: .day, value: -1, to: date) else { break }
+            date = newDate
+        }
+        
+        return dates.reversed()
+    }
 
-//    func handleError(_ error: Error) {
-//        if error as? AuthError == .unauthorized {
-//            coordinator.showAuthScene()
-//        } else {
-//            state.errorMessage = error.localizedDescription
-//            state.isAlertPresenting = true
-//        }
-//    }
-//
-//    func retrieveProfile() async {
-//        state.isLoading = true
-//        do {
-//            let profile = try await profileService.getProfile()
-//            self.profile = profile
-//            
-//            self.state.avatarLink = profile.avatarUrl ?? ""
-//            self.state.name = profile.name
-//            self.state.description = profile.description ?? "no descriptions"
-//            state.isLoading = false
-//        } catch {
-//            state.errorMessage = error.localizedDescription
-//            state.isLoading = false
-//        }
-//    }
+    func splitDatesIntoWeeks(dates: [Date]) -> [[Date]] {
+        var weeks: [[Date]] = []
+        let calendar = Calendar.current
+        
+        var currentWeek: [Date] = []
+        var currentWeekStart: Date?
+        
+        for date in dates {
+            // Определяем начало недели для текущей даты
+            var components = calendar.dateComponents([.year, .weekOfYear], from: date)
+            components.weekday = 1 // Понедельник
+            if let weekStart = calendar.date(from: components) {
+                if currentWeekStart == nil || weekStart != currentWeekStart {
+                    // Если это начало новой недели, добавляем предыдущую неделю в результат
+                    if !currentWeek.isEmpty {
+                        weeks.append(currentWeek)
+                    }
+                    currentWeek = []
+                    currentWeekStart = weekStart
+                }
+            }
+            
+            currentWeek.append(date)
+        }
+        
+        // Добавляем последнюю неделю в результат
+        if !currentWeek.isEmpty {
+            weeks.append(currentWeek)
+        }
+        
+        return weeks
+    }
+
 }

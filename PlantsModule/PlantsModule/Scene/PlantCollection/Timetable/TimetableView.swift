@@ -3,7 +3,7 @@ import PUI
 
 struct TimetableView: View {
     @State var color: Color
-    @State var weeks: [WeekModel] = []
+    @State var weeks: [WeekModel]
 
     var body: some View {
         HStack(alignment: .top) {
@@ -34,12 +34,13 @@ struct TimetableView: View {
                         }
                     }
                     .padding(.vertical, PUI.Spacing.large)
-                    .onChange(of: weeks) {
-                        withAnimation {
-                            proxy.scrollTo("last", anchor: .bottom)
-                        }
-                    }
+//                    .onChange(of: weeks) {
+//                        withAnimation {
+//                            proxy.scrollTo("last", anchor: .bottom)
+//                        }
+//                    }
                     .scrollIndicators(.hidden)
+                    .scaleEffect(x: -1, y: 1)
                 }
             }
             VStack(spacing: Defaults.spacing) {
@@ -51,11 +52,6 @@ struct TimetableView: View {
                         .frame(height: Defaults.dayRectSide)
                 }
             }.padding(.vertical, PUI.Spacing.large)
-        }
-        .onAppear {
-            weeks = splitDatesIntoWeeks(dates: generateDates()).map { week in
-                WeekModel(days: week.map { DayModel(date: $0, isWatered: $0.isMonday()) })
-            }
         }
     }
 }

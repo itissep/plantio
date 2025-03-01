@@ -12,6 +12,7 @@
 		2CDEA2CD2D7358E10012A3FE /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2CB2D7358E10012A3FE /* DayModel.swift */; };
 		2CDEA2CF2D7358EA0012A3FE /* WeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2CE2D7358EA0012A3FE /* WeekModel.swift */; };
 		2CDEA2D32D7359740012A3FE /* EventTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2D22D7359740012A3FE /* EventTimetableView.swift */; };
+		2CDEA2D92D737DE80012A3FE /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2D72D737DE80012A3FE /* PhotoGridView.swift */; };
 		2CF3B6572D6A5C3F00731684 /* PlantsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF3B6552D6A5C3F00731684 /* PlantsModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CF3B6612D6A5DDD00731684 /* PlantCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B65A2D6A5C5600731684 /* PlantCoordinatorView.swift */; };
 		2CF3B6622D6A5DDD00731684 /* PlantCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6592D6A5C5600731684 /* PlantCoordinatorProtocol.swift */; };
@@ -54,6 +55,7 @@
 		2CDEA2CB2D7358E10012A3FE /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		2CDEA2CE2D7358EA0012A3FE /* WeekModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekModel.swift; sourceTree = "<group>"; };
 		2CDEA2D22D7359740012A3FE /* EventTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimetableView.swift; sourceTree = "<group>"; };
+		2CDEA2D72D737DE80012A3FE /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
 		2CF3B63F2D6A5BFE00731684 /* PlantsModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlantsModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF3B6552D6A5C3F00731684 /* PlantsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlantsModule.h; sourceTree = "<group>"; };
 		2CF3B6582D6A5C5600731684 /* PlantCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCoordinator.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 				2CDEA2CE2D7358EA0012A3FE /* WeekModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2CDEA2D82D737DE80012A3FE /* PhotoGrid */ = {
+			isa = PBXGroup;
+			children = (
+				2CDEA2D72D737DE80012A3FE /* PhotoGridView.swift */,
+			);
+			path = PhotoGrid;
 			sourceTree = "<group>";
 		};
 		2CF3B6352D6A5BFE00731684 = {
@@ -190,6 +200,7 @@
 		2CF3B65F2D6A5C7D00731684 /* PlantCollection */ = {
 			isa = PBXGroup;
 			children = (
+				2CDEA2D82D737DE80012A3FE /* PhotoGrid */,
 				2CDEA2C62D7358A90012A3FE /* Timetable */,
 				2CDEA2C02D7357D90012A3FE /* EventTimetable */,
 				2CF3B66E2D6A5E6000731684 /* PlantCollectionView.swift */,
@@ -302,6 +313,7 @@
 			files = (
 				2CF3B6612D6A5DDD00731684 /* PlantCoordinatorView.swift in Sources */,
 				2CF3B67C2D6B7BEB00731684 /* MockPlantService.swift in Sources */,
+				2CDEA2D92D737DE80012A3FE /* PhotoGridView.swift in Sources */,
 				2CF3B6782D6B7A2B00731684 /* PlantServiceProtocol.swift in Sources */,
 				2CF3B6762D6A60AD00731684 /* PlantCollectionViewModel.swift in Sources */,
 				2CF3B6622D6A5DDD00731684 /* PlantCoordinatorProtocol.swift in Sources */,

@@ -11,22 +11,24 @@ public struct EventTimetableView: View {
                     .foregroundStyle(Color.pui.textPrimary)
                     .font(PUI.Font.title)
             }
-            TimetableView(color: viewModel.color)
+            
+            TimetableView(color: viewModel.color, weeks: viewModel.weeks)
             
             HStack {
                 Button(viewModel.actionTitle) {
                     viewModel.onActionTap()
                 }.buttonStyle(PUI.BaseButtonStyle(isProminent: true, color: viewModel.color))
                 
-                Button(action: {
-                    viewModel.onDatePickerTap()
-                }, label: {
-                    Image(systemName: "calendar.badge.plus")
-                        .foregroundStyle(viewModel.color)
-                        .bold()
-                        .font(.system(size: 30))
-                })
-                .frame(width: 50)
+                // TODO: add date picker
+//                Button(action: {
+//                    viewModel.onDatePickerTap()
+//                }, label: {
+//                    Image(systemName: "calendar.badge.plus")
+//                        .foregroundStyle(viewModel.color)
+//                        .bold()
+//                        .font(.system(size: 30))
+//                })
+//                .frame(width: 50)
             }
         }
     }
