@@ -13,6 +13,10 @@
 		2CDEA2CF2D7358EA0012A3FE /* WeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2CE2D7358EA0012A3FE /* WeekModel.swift */; };
 		2CDEA2D32D7359740012A3FE /* EventTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2D22D7359740012A3FE /* EventTimetableView.swift */; };
 		2CDEA2D92D737DE80012A3FE /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA2D72D737DE80012A3FE /* PhotoGridView.swift */; };
+		2CDEA3382D748C740012A3FE /* LocalPlantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA3362D748C740012A3FE /* LocalPlantService.swift */; };
+		2CDEA33A2D748C860012A3FE /* PlantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA3392D748C860012A3FE /* PlantEntity.swift */; };
+		2CDEA33C2D748C8F0012A3FE /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA33B2D748C8F0012A3FE /* EventEntity.swift */; };
+		2CDEA33F2D749DDB0012A3FE /* CreatePlantViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA33E2D749DDB0012A3FE /* CreatePlantViewState.swift */; };
 		2CF3B6572D6A5C3F00731684 /* PlantsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF3B6552D6A5C3F00731684 /* PlantsModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CF3B6612D6A5DDD00731684 /* PlantCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B65A2D6A5C5600731684 /* PlantCoordinatorView.swift */; };
 		2CF3B6622D6A5DDD00731684 /* PlantCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6592D6A5C5600731684 /* PlantCoordinatorProtocol.swift */; };
@@ -24,13 +28,13 @@
 		2CF3B66C2D6A5DF900731684 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B66B2D6A5DF900731684 /* Core.framework */; };
 		2CF3B66D2D6A5DF900731684 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B66B2D6A5DF900731684 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CF3B66F2D6A5E6000731684 /* PlantCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B66E2D6A5E6000731684 /* PlantCollectionView.swift */; };
-		2CF3B6712D6A5E9D00731684 /* PlantDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6702D6A5E9D00731684 /* PlantDetailsView.swift */; };
+		2CF3B6712D6A5E9D00731684 /* CreatePlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6702D6A5E9D00731684 /* CreatePlantView.swift */; };
 		2CF3B6732D6A5FEA00731684 /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B6722D6A5FEA00731684 /* Models.framework */; };
 		2CF3B6742D6A5FEA00731684 /* Models.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF3B6722D6A5FEA00731684 /* Models.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CF3B6762D6A60AD00731684 /* PlantCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6752D6A60AD00731684 /* PlantCollectionViewModel.swift */; };
 		2CF3B6782D6B7A2B00731684 /* PlantServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6772D6B7A2B00731684 /* PlantServiceProtocol.swift */; };
 		2CF3B67C2D6B7BEB00731684 /* MockPlantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B67B2D6B7BEB00731684 /* MockPlantService.swift */; };
-		2CF3B6E52D6E44C200731684 /* PlantDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6E42D6E44C200731684 /* PlantDetailsViewModel.swift */; };
+		2CF3B6E52D6E44C200731684 /* CreatePlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3B6E42D6E44C200731684 /* CreatePlantViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +60,10 @@
 		2CDEA2CE2D7358EA0012A3FE /* WeekModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekModel.swift; sourceTree = "<group>"; };
 		2CDEA2D22D7359740012A3FE /* EventTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimetableView.swift; sourceTree = "<group>"; };
 		2CDEA2D72D737DE80012A3FE /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
+		2CDEA3362D748C740012A3FE /* LocalPlantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPlantService.swift; sourceTree = "<group>"; };
+		2CDEA3392D748C860012A3FE /* PlantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEntity.swift; sourceTree = "<group>"; };
+		2CDEA33B2D748C8F0012A3FE /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
+		2CDEA33E2D749DDB0012A3FE /* CreatePlantViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlantViewState.swift; sourceTree = "<group>"; };
 		2CF3B63F2D6A5BFE00731684 /* PlantsModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlantsModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF3B6552D6A5C3F00731684 /* PlantsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlantsModule.h; sourceTree = "<group>"; };
 		2CF3B6582D6A5C5600731684 /* PlantCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCoordinator.swift; sourceTree = "<group>"; };
@@ -66,12 +74,12 @@
 		2CF3B6672D6A5DF500731684 /* PUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF3B66B2D6A5DF900731684 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF3B66E2D6A5E6000731684 /* PlantCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionView.swift; sourceTree = "<group>"; };
-		2CF3B6702D6A5E9D00731684 /* PlantDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailsView.swift; sourceTree = "<group>"; };
+		2CF3B6702D6A5E9D00731684 /* CreatePlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlantView.swift; sourceTree = "<group>"; };
 		2CF3B6722D6A5FEA00731684 /* Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF3B6752D6A60AD00731684 /* PlantCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewModel.swift; sourceTree = "<group>"; };
 		2CF3B6772D6B7A2B00731684 /* PlantServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantServiceProtocol.swift; sourceTree = "<group>"; };
 		2CF3B67B2D6B7BEB00731684 /* MockPlantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlantService.swift; sourceTree = "<group>"; };
-		2CF3B6E42D6E44C200731684 /* PlantDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailsViewModel.swift; sourceTree = "<group>"; };
+		2CF3B6E42D6E44C200731684 /* CreatePlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlantViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,24 @@
 			path = PhotoGrid;
 			sourceTree = "<group>";
 		};
+		2CDEA3372D748C740012A3FE /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2CDEA3362D748C740012A3FE /* LocalPlantService.swift */,
+				2CDEA33D2D748C940012A3FE /* Entities */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		2CDEA33D2D748C940012A3FE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2CDEA3392D748C860012A3FE /* PlantEntity.swift */,
+				2CDEA33B2D748C8F0012A3FE /* EventEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		2CF3B6352D6A5BFE00731684 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +197,7 @@
 		2CF3B6532D6A5C3F00731684 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				2CF3B6602D6A5C7D00731684 /* PlantDetails */,
+				2CF3B6602D6A5C7D00731684 /* CreatePlant */,
 				2CF3B65F2D6A5C7D00731684 /* PlantCollection */,
 			);
 			path = Scene;
@@ -180,6 +206,7 @@
 		2CF3B6542D6A5C3F00731684 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2CDEA3372D748C740012A3FE /* LocalStorage */,
 				2CF3B6772D6B7A2B00731684 /* PlantServiceProtocol.swift */,
 				2CF3B67B2D6B7BEB00731684 /* MockPlantService.swift */,
 			);
@@ -209,13 +236,14 @@
 			path = PlantCollection;
 			sourceTree = "<group>";
 		};
-		2CF3B6602D6A5C7D00731684 /* PlantDetails */ = {
+		2CF3B6602D6A5C7D00731684 /* CreatePlant */ = {
 			isa = PBXGroup;
 			children = (
-				2CF3B6702D6A5E9D00731684 /* PlantDetailsView.swift */,
-				2CF3B6E42D6E44C200731684 /* PlantDetailsViewModel.swift */,
+				2CF3B6702D6A5E9D00731684 /* CreatePlantView.swift */,
+				2CF3B6E42D6E44C200731684 /* CreatePlantViewModel.swift */,
+				2CDEA33E2D749DDB0012A3FE /* CreatePlantViewState.swift */,
 			);
-			path = PlantDetails;
+			path = CreatePlant;
 			sourceTree = "<group>";
 		};
 		2CF3B6662D6A5DF500731684 /* Frameworks */ = {
@@ -312,18 +340,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF3B6612D6A5DDD00731684 /* PlantCoordinatorView.swift in Sources */,
+				2CDEA33A2D748C860012A3FE /* PlantEntity.swift in Sources */,
 				2CF3B67C2D6B7BEB00731684 /* MockPlantService.swift in Sources */,
 				2CDEA2D92D737DE80012A3FE /* PhotoGridView.swift in Sources */,
+				2CDEA3382D748C740012A3FE /* LocalPlantService.swift in Sources */,
 				2CF3B6782D6B7A2B00731684 /* PlantServiceProtocol.swift in Sources */,
 				2CF3B6762D6A60AD00731684 /* PlantCollectionViewModel.swift in Sources */,
 				2CF3B6622D6A5DDD00731684 /* PlantCoordinatorProtocol.swift in Sources */,
 				2CDEA2CD2D7358E10012A3FE /* DayModel.swift in Sources */,
 				2CDEA2CF2D7358EA0012A3FE /* WeekModel.swift in Sources */,
 				2CDEA2D32D7359740012A3FE /* EventTimetableView.swift in Sources */,
-				2CF3B6E52D6E44C200731684 /* PlantDetailsViewModel.swift in Sources */,
+				2CDEA33C2D748C8F0012A3FE /* EventEntity.swift in Sources */,
+				2CF3B6E52D6E44C200731684 /* CreatePlantViewModel.swift in Sources */,
 				2CF3B66F2D6A5E6000731684 /* PlantCollectionView.swift in Sources */,
 				2CDEA2C72D7358A90012A3FE /* TimetableView.swift in Sources */,
-				2CF3B6712D6A5E9D00731684 /* PlantDetailsView.swift in Sources */,
+				2CF3B6712D6A5E9D00731684 /* CreatePlantView.swift in Sources */,
+				2CDEA33F2D749DDB0012A3FE /* CreatePlantViewState.swift in Sources */,
 				2CF3B6642D6A5DE500731684 /* ScreenFactory+Plants.swift in Sources */,
 				2CF3B6652D6A5DE500731684 /* ScreenFactoryProtocol.swift in Sources */,
 				2CDEA2C32D7357EC0012A3FE /* EventTimetableViewModel.swift in Sources */,

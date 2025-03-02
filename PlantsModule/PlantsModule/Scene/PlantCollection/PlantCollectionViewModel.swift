@@ -4,7 +4,6 @@ import Models
 import PUI // TODO: remove this later
 
 struct PlantCollectionViewState: Equatable {
-    // TODO: add plants
     // TODO: add frinds
     
     var plants: [Plant] = []
@@ -23,6 +22,7 @@ enum PlantCollectionViewEvent {
     case onAlertPresented(Bool)
     
     case onAddPlantTapped
+    case onDeletePlantTapped
     
     case onPlantSelectWithId(String)
 }
@@ -52,14 +52,29 @@ final class PlantCollectionViewModel: ViewModel {
             state.isLoading = false
         case .onAlertPresented(let errorMessage):
             print("[ERROR] \(errorMessage)")
+        case .onDeletePlantTapped:
+            deleteSelectedPlant()
         case .onAddPlantTapped:
-            print("wow")
+            coordinator.showCreatePlantScene()
         case .onPlantSelectWithId(let selectedId):
             state.isLoading = true
             state.selectedPlant = state.plants.first(where: { $0.id == selectedId})
             updateEvents(for: selectedId)
             updatePhotos(for: selectedId)
             state.isLoading = false
+        }
+    }
+    
+    private func deleteSelectedPlant() {
+        guard let plantId = state.selectedPlant?.id else {
+            return
+        }
+        plantService.deletePlant(with: plantId) {[weak self] error in
+            guard let error else {
+                self?.updatePlants()
+                return
+            }
+            self?.state.errorMessage = error.localizedDescription
         }
     }
     
@@ -103,10 +118,10 @@ final class PlantCollectionViewModel: ViewModel {
     
     private func createNewEvent() {
         if let plant = state.selectedPlant {
-            let newEvent = Models.Event(id: UUID().uuidString, note: "", plant: plant, createdAt: .now)
-            plantService.newEvent(newEvent) { error in
+            let newEvent = Models.Event(id: UUID().uuidString, note: "", plantId: plant.id, createdAt: .now)
+            plantService.newEvent(newEvent) { [weak self] error in
                 if let error {
-                    state.errorMessage = error.localizedDescription
+                    self?.state.errorMessage = error.localizedDescription
                 }
             }
         }
