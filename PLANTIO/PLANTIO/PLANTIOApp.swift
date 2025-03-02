@@ -15,10 +15,12 @@ struct PLANTIOApp: App {
         
         appServiceLocator.register(MockAuthService() as AuthServiceProtocol)
         appServiceLocator.register(MockProfileService() as ProfileServiceProtocol)
-        appServiceLocator.register(MockPlantService() as PlantServiceProtocol)
+//        appServiceLocator.register(MockPlantService() as PlantServiceProtocol)
         appServiceLocator.register(MockFeedService() as FeedServiceProtocol)
         appServiceLocator.register(RegistrationValidationService())
         appServiceLocator.register(ClassifierViewModel()) // TODO: separate ViewModel and Service later
+        
+        appServiceLocator.register(LocalPlantService() as PlantServiceProtocol)
         
         self.serviceLocator = appServiceLocator
     }
