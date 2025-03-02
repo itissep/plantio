@@ -24,8 +24,8 @@ public struct PlantCoordinatorView: View {
         switch screen {
         case .plantCollection:
             factory.makePlantCollectionView(coordinator: coordinator)
-        case .plant(let id):
-            factory.makePlantView(coordinator: coordinator, plantId: id)
+        case .createPlant:
+            factory.makeCreatePlantView(coordinator: coordinator)
         }
     }
 }

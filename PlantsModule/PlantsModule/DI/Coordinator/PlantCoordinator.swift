@@ -5,7 +5,7 @@ public class PlantCoordinator: Coordinator {
 
     public enum Screen: Routable {
         case plantCollection
-        case plant(String)
+        case createPlant
 //        case sharePlant
     }
 
@@ -16,11 +16,15 @@ public class PlantCoordinator: Coordinator {
 
 extension PlantCoordinator: PlantCoordinatorProtocol {
     public func showPlantCollectionScene() {
-        navigationPath.append(.plantCollection)
+        if navigationPath.last == .createPlant {
+            navigationPath.remove(at: navigationPath.count - 1)
+        } else {
+            navigationPath.append(.plantCollection)
+        }
     }
     
-    public func showPlantDetailsScene(with id: String) {
-        navigationPath.append(.plant(id))
+    public func showCreatePlantScene() {
+        navigationPath.append(.createPlant)
     }
     
     public func showSharePlantScene() {

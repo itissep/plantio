@@ -9,12 +9,12 @@ extension ScreenFactory: PlantViewFactory {
         return PlantCollectionView(viewModel: viewModel)
     }
     
-    public func makePlantView(coordinator: PlantCoordinatorProtocol, plantId: String) -> PlantDetailsView {
-//        let viewModel = PostDetailsViewModel(
-//            coordinator: coordinator,
-//            feedService: serviceLocator.resolve()!,
-//            postId: postId
-//        )
-        return PlantDetailsView()
+    @MainActor
+    public func makeCreatePlantView(coordinator: PlantCoordinatorProtocol) -> CreatePlantView {
+        let viewModel = CreatePlantViewModel(
+            coordinator: coordinator,
+            plantService: serviceLocator.resolve()!
+        )
+        return CreatePlantView(viewModel: viewModel)
     }
 }
