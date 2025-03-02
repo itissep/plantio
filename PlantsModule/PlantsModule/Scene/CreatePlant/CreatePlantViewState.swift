@@ -11,7 +11,7 @@ struct CreatePlantViewState: Equatable {
     var isAlertPresenting = false
 
     var isSaveDisabled: Bool {
-        imageData != nil || name.isEmpty
+        imageData == nil || name.isEmpty || description.isEmpty
     }
 }
 

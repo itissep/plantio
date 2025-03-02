@@ -1,9 +1,12 @@
 import SwiftUI
 import PUI
+import PhotosUI
 
 public struct CreatePlantView: View {
 
     @StateObject private var viewModel: CreatePlantViewModel
+    @State var showSelection = false
+    @State private var selectedItem: PhotosPickerItem?
 
     init(viewModel: CreatePlantViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -17,49 +20,45 @@ public struct CreatePlantView: View {
                     .font(PUI.Font.title)
                     .foregroundStyle(Color.pui.textPrimary)
             
-                ZStack(alignment: .bottomTrailing) {
-//                    AsyncImage(url: URL(string: viewModel.state.imageData)) { phase in
-//                        switch phase {
-//                        case .empty:
-//                            ZStack {
-//                                Color.pui.backgroundSecondary
-//                                ProgressView()
-//                                    .tint(Color.pui.accent)
-//                            }
-//                        case .success(let image):
-//                            image
-//                                .resizable()
-//                                .scaledToFill()
-//                        case .failure(_):
-//                            ZStack {
-//                                Color.pui.backgroundSecondary
-//                                Image(systemName: "photo.fill")
-//                                    .font(.title)
-//                                    .tint(Color.pui.accent)
-//                            }
-//                        default:
-//                            Color.pui.backgroundSecondary
+                if
+                    let imageData = viewModel.state.imageData,
+                    let image = UIImage(data: imageData)
+                {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 300, height: 300)
+                        .clipShape(.rect(cornerRadius: PUI.Constant.cornerRadius))
+//                        .overlay {
+//                            if viewModel.isLoading { loader }
 //                        }
-//                    }
-//                    .frame(width: 250, height: 250)
-//                    .clipShape(Circle())
-                
-                    Button {
-//                        viewModel.handle(.avatarLinkChanged("https://thumbs.dreamstime.com/b/cute-kitten-flowers-smelling-120490331.jpg"))
-                    } label: {
-                        Circle()
-                            .foregroundStyle(Color.pui.backgroundSecondary)
-                            .overlay {
-                                Image(systemName: "pencil")
-                                    .font(.title)
-                                    .foregroundStyle(Color.pui.accent)
-                            }
-                    }
-                    .buttonStyle(.plain)
-                    .frame(width: 50, height: 50)
-                    .padding(.trailing, PUI.Spacing.large)
-                    .padding(.bottom, PUI.Spacing.large)
+                } else {
+                    RoundedRectangle(cornerRadius: PUI.Constant.cornerRadius)
+                        .foregroundStyle(Color.pui.accent)
+                        .frame(width: 300, height: 300)
+                        .overlay {
+//                            if viewModel.isLoading {
+//                                loader
+//                            } else {
+                                Text("image")
+                                    .monospaced()
+                                    .foregroundStyle(.background)
+//                            }
+                        }
                 }
+                    
+                PhotosPicker(
+                    selection: $selectedItem,
+                    matching: .images,
+                    photoLibrary: .shared()
+                ) { Text("pick new image") }
+                    .baseButtonStyle()
+                    .frame(width: 300)
+                    .onChange(of: selectedItem) { _, newItem in
+                        Task {
+                            self.viewModel.handle(.imageChanged(try? await newItem?.loadTransferable(type: Data.self)))
+                        }
+                    }
                 
                 TextField("type plant's name here", text: name)
                     .formItem()
@@ -131,4 +130,20 @@ public struct CreatePlantView: View {
             set: { viewModel.handle(.onAlertPresented($0)) }
         )
     }
+    
+//    private var loader: some View {
+//        RoundedRectangle(cornerRadius: PUI.Constant.cornerRadius)
+//            .foregroundStyle(Color.pui.accent)
+//            .frame(width: 300, height: 300)
+//            .overlay {
+//                Image.pui.iconRounded
+//                    .resizable()
+//                    .frame(width: 40, height: 40)
+//                    .foregroundStyle(Color.pui.backgroundPrimary)
+//                    .rotationEffect(.degrees(isLoaderAnimating ? 360 : 0))
+//                    .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false), value: isLoaderAnimating)
+//                    .onAppear { isLoaderAnimating = true }
+//                    .onDisappear { isLoaderAnimating = false }
+//            }
+//    }
 }

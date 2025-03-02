@@ -5,6 +5,10 @@ import Models
 public struct PlantCollectionView: View {
     
     @StateObject private var viewModel: PlantCollectionViewModel
+    @State private var isAddPhotoShown = false
+    
+//    @State private var popoverPhotoData: Data?
+//    @State private var isPopoverPresented = false
     
     init(viewModel: PlantCollectionViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -41,8 +45,8 @@ public struct PlantCollectionView: View {
                         ForEach(viewModel.state.plants, id: \.id) { plant in
                             ZStack(alignment: .bottomTrailing) {
                                 Group {
-                                    if let urlString = plant.mainImageUrl, let url = URL(string: urlString) {
-                                        PUI.Picture(url)
+                                    if let imageData = plant.imageData {
+                                        PUI.Picture(nil, data: imageData)
                                             .frame(width: 95, height: 95)
                                             .clipShape(.rect(cornerRadius: PUI.Constant.cornerRadius))
                                     } else {
@@ -101,16 +105,34 @@ public struct PlantCollectionView: View {
                         PhotoGridView(
                             urlStrings: viewModel.state.plantPhotos,
                             lastItemIcon: Image(systemName: "plus")
-                        ) { id in
-                            // TODO: zoom photo
-                            
+                        ) { data in
+//                            popoverPhotoData = data
+//                            isPopoverPresented = true
                         } lastItemAction: {
-                            viewModel.handle(.onAddPlantTapped)
+                            isAddPhotoShown = true
                         }
+                        
+                        Button {
+                            viewModel.handle(.onDeletePlantTapped)
+                        } label: {
+                            Text("delete this plant")
+                        }.baseButtonStyle(isProminent: false)
+                        
                     }.padding(.horizontal, PUI.Spacing.large)
                 }
             }
         }
+        .sheet(isPresented: $isAddPhotoShown) {
+            AddPhotoSheet { data in
+                viewModel.handle(.onAddPhoto(data))
+            }
+        }
+//        .popover(isPresented: $isPopoverPresented) {
+//            if let popoverPhotoData {
+//                Image(uiImage: UIImage(data: popoverPhotoData))
+//                    .resizable()
+//            }
+//        }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("My plants")

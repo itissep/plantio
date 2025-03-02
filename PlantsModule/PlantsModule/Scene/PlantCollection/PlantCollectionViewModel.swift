@@ -10,6 +10,7 @@ struct PlantCollectionViewState: Equatable {
     var selectedPlant: Plant? = nil
     var plantEvents: [EventTimetableViewModel] = []
     var plantPhotos: [String] = []
+    var plantPhotos: [PhotoModel] = []
     
     // Service
     var isLoading = false
@@ -22,6 +23,7 @@ enum PlantCollectionViewEvent {
     case onAlertPresented(Bool)
     
     case onAddPlantTapped
+    case onAddPhoto(Data?)
     case onDeletePlantTapped
     
     case onPlantSelectWithId(String)
@@ -52,6 +54,8 @@ final class PlantCollectionViewModel: ViewModel {
             state.isLoading = false
         case .onAlertPresented(let errorMessage):
             print("[ERROR] \(errorMessage)")
+        case .onAddPhoto(let imageData):
+            addPhoto(imageData)
         case .onDeletePlantTapped:
             deleteSelectedPlant()
         case .onAddPlantTapped:
@@ -65,15 +69,30 @@ final class PlantCollectionViewModel: ViewModel {
         }
     }
     
+    private func addPhoto(_ imageData: Data?) {
+        guard let imageData, let plantId = state.selectedPlant?.id else {
+            return
+        }
+        plantService.newPhoto(imageData, for: plantId) { [weak self] error in
+            if let error {
+                self?.state.errorMessage = error.localizedDescription
+            } else {
+                self?.updatePhotos(for: plantId)
+            }
+        }
+        
+    }
+    
     private func deleteSelectedPlant() {
         guard let plantId = state.selectedPlant?.id else {
             return
         }
-        plantService.deletePlant(with: plantId) {[weak self] error in
+        plantService.deletePlant(with: plantId) { [weak self] error in
             guard let error else {
                 self?.updatePlants()
                 return
             }
+            print("[ERROR] \(error)")
             self?.state.errorMessage = error.localizedDescription
         }
     }

@@ -22,28 +22,20 @@ class CreatePlantViewModel: ViewModel {
     func handle(_ event: CreatePlantViewEvent) {
         switch event {
         case .onAppear:
-//            Task { await retrieveProfile() }
             break
         case .saveTapped:
             Task { await createPlant() }
         case .cancelTapped:
             coordinator.showPlantCollectionScene()
-
         case .imageChanged(let imageData):
-//            avatarLinkUpdated(imageData)
-            break
+            state.imageData = imageData
         case .nameChanged(let name):
             state.name = name
-            
-            
         case .onAlertPresented(let isPresented):
             state.isAlertPresenting = isPresented
-            
         case .descriptionChanged(let description):
             state.description = description
         }
-        
-//        checkDataIsChange()
     }
 }
 
@@ -59,7 +51,7 @@ private extension CreatePlantViewModel {
             Plant(
                 id: UUID().uuidString,
                 name: state.name,
-                mainImageUrl: nil, // TODO: safe image
+                imageData: state.imageData,
                 createdDate: .now,
                 plantDate: nil,
                 description: state.description
@@ -70,5 +62,4 @@ private extension CreatePlantViewModel {
                 self?.coordinator.showPlantCollectionScene()
             }
     }
-
 }

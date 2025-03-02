@@ -10,6 +10,7 @@ public protocol PlantServiceProtocol {
     func newEvent(_ event: Event, completion: @escaping (Error?) -> Void)
     func deleteEvent(with eventId: String, completion: @escaping (Error?) -> Void)
     
-    func getPhotos(for plantId: String, completion: @escaping ([String], Error?) -> Void)
-    func deletePhoto(with path: String, completion: @escaping (Error?) -> Void)
+    func deletePhoto(with id: String, completion: @escaping (Error?) -> Void)
+    func newPhoto(_ imageData: Data, for plantId: String, completion: @escaping (Error?) -> Void)
+    func getPhotos(for plantId: String, completion: @escaping ([PhotoModel], Error?) -> Void)
 }

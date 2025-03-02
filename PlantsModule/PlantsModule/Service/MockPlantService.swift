@@ -3,6 +3,13 @@ import Models
 import Core
 
 public class MockPlantService: PlantServiceProtocol {
+    public func newPhoto(_ imageData: Data, for plantId: String, completion: @escaping ((any Error)?) -> Void) {
+        //
+    }
+    
+    public func getPhotos(for plantId: String, completion: @escaping ([PhotoModel], (any Error)?) -> Void) {
+        //
+    }
     
     public init() { }
     
@@ -59,9 +66,9 @@ public class MockPlantService: PlantServiceProtocol {
     public func fetchPlants(completion: @escaping ([Plant], (any Error)?) -> Void) {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             completion([
-                .init(name: "some plant", mainImageUrl: "https://thumbs.dreamstime.com/b/orchid-flower-pink-branch-65923208.jpg"),
-                .init(name: "some plant", mainImageUrl: "https://thumbs.dreamstime.com/b/orchid-flower-pink-branch-65923208.jpg"),
-                .init(name: "some plant", mainImageUrl: "https://thumbs.dreamstime.com/b/orchid-flower-pink-branch-65923208.jpg"),
+//                .init(name: "some plant", mainImageUrl: "https://thumbs.dreamstime.com/b/orchid-flower-pink-branch-65923208.jpg"),
+//                .init(name: "some plant", mainImageUrl: "https://thumbs.dreamstime.com/b/orchid-flower-pink-branch-65923208.jpg"),
+//                .init(name: "some plant", mainImageUrl: "https://thumbs.dreamstime.com/b/orchid-flower-pink-branch-65923208.jpg"),
             ], nil)
 //        }
     }

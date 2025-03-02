@@ -1,12 +1,13 @@
 import SwiftUI
 import Models
 import PUI
+import Core
 
 struct PhotoGridView: View {
-    let urlStrings: [String]
+    let urlStrings: [PhotoModel]
     
     let lastItemIcon: Image
-    let onPlantTap: (String) -> Void
+    let onPlantTap: (Data) -> Void
     let lastItemAction: () -> Void
     
     var body: some View {
@@ -20,20 +21,26 @@ struct PhotoGridView: View {
             spacing: PUI.Spacing.large,
             pinnedViews: [.sectionHeaders, .sectionFooters]
         ) {
-            ForEach(urlStrings, id: \.self) { urlString in
-                Group {
-                    if let url = URL(string: urlString) {
-                        GeometryReader { geometry in
-                            PUI.Picture(url)
-                                .frame(height: geometry.size.width)
-                        }
-                        .aspectRatio(1, contentMode: .fit)
-                        .clipShape(.rect(cornerRadius: PUI.Constant.cornerRadius))
-                    } else {
-                        RoundedRectangle(cornerRadius: PUI.Constant.cornerRadius)
-                            .foregroundStyle(Color.pui.accent)
-                            .aspectRatio(1, contentMode: .fit)
+            ForEach(urlStrings, id: \.id) { item in
+                ZStack(alignment: .bottomTrailing) {
+                    GeometryReader { geometry in
+                        PUI.Picture(nil, data: item.imageData)
+                            .frame(height: geometry.size.width)
+                            .onLongPressGesture {
+                                onPlantTap(item.imageData)
+                            }
                     }
+                    .aspectRatio(1, contentMode: .fit)
+                    .clipShape(.rect(cornerRadius: PUI.Constant.cornerRadius))
+                    
+                    Text(item.createdAt.formattedAsLongDate())
+                        .font(PUI.Font.caption)
+                        .padding(.all, PUI.Spacing.small)
+                        .background {
+                            RoundedRectangle(cornerRadius: 5)
+                                .foregroundStyle(Color.pui.backgroundPrimary)
+                        }
+                        .padding(.all, PUI.Spacing.small)
                 }
             }
             RoundedRectangle(cornerRadius: PUI.Constant.cornerRadius)
