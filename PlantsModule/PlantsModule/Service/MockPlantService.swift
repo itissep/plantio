@@ -17,19 +17,19 @@ public class MockPlantService: PlantServiceProtocol {
                     .init(
                         id: "1",
                         note: "",
-                        plant: Plant.mock,
+                        plantId: Plant.mock.id,
                         createdAt: Date(day: 27, month: 1, year: 2025)!
                     ),
                     .init(
                         id: "3",
                         note: "",
-                        plant: Plant.mock,
+                        plantId: Plant.mock.id,
                         createdAt: Date(day: 26, month: 1, year: 2025)!
                     ),
                     .init(
                         id: "2",
                         note: "",
-                        plant: Plant.mock,
+                        plantId: Plant.mock.id,
                         createdAt: Date(day: 25, month: 1, year: 2025)!
                     )
                 ], nil)
@@ -69,5 +69,17 @@ public class MockPlantService: PlantServiceProtocol {
     public func newEvent(_ event: Event, completion: ((any Error)?) -> Void) {
         print("eventCreated")
         completion(nil)
+    }
+    
+    public func deletePlant(with plantId: String, completion: @escaping ((any Error)?) -> Void) {
+        //
+    }
+    
+    public func deleteEvent(with eventId: String, completion: @escaping ((any Error)?) -> Void) {
+        //
+    }
+    
+    public func deletePhoto(with path: String, completion: @escaping ((any Error)?) -> Void) {
+        //
     }
 }
