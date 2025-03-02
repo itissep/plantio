@@ -3,9 +3,11 @@ import SwiftUI
 public extension PUI {
     struct Picture: View {
         var url: URL?
+        var data: Data?
         
-        public init(_ url: URL?) {
+        public init(_ url: URL?, data: Data?) {
             self.url = url
+            self.data = data
         }
         
         public var body: some View {
@@ -33,6 +35,10 @@ public extension PUI {
                         Color.pui.backgroundSecondary
                     }
                 }
+            } else if let data, let image = UIImage(data: data) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
             } else {
                 Color.pui.backgroundSecondary
             }

@@ -8,7 +8,7 @@ struct CommentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: PUI.Spacing.medium) {
             HStack(spacing: PUI.Spacing.small) {
-                PUI.Picture(model.user.avatarUrl.flatMap { URL(string: $0) ?? nil })
+                PUI.Picture(model.user.avatarUrl.flatMap { URL(string: $0) ?? nil }, data: nil)
                     .frame(width: 20, height: 20)
                     .clipShape(Circle())
                     .clipped()

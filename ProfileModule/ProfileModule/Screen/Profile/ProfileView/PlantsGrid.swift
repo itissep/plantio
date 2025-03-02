@@ -22,9 +22,9 @@ struct PlantsGrid: View {
         ) {
             ForEach(plants, id: \.id) { plant in
                 Group {
-                    if let urlString = plant.mainImageUrl, let url = URL(string: urlString) {
+                    if let image = plant.imageData {
                         GeometryReader { geometry in
-                            PUI.Picture(url)
+                            PUI.Picture(nil, data: image)
                                 .frame(height: geometry.size.width)
                         }
                         .aspectRatio(1, contentMode: .fit)

@@ -8,7 +8,7 @@ struct PostView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: PUI.Spacing.large) {
             HStack {
-                PUI.Picture(model.user.avatarUrl.flatMap { URL(string: $0) ?? nil })
+                PUI.Picture(model.user.avatarUrl.flatMap { URL(string: $0) ?? nil }, data: nil)
                     .frame(width: 30, height: 30)
                     .clipShape(Circle())
                     .clipped()

@@ -13,7 +13,7 @@ public struct ProfileView: View {
         ScrollView {
             VStack(spacing: PUI.Spacing.large) {
                 VStack(spacing: PUI.Spacing.medium) {
-                    PUI.Picture(URL(string: viewModel.state.avatarLink))
+                    PUI.Picture(URL(string: viewModel.state.avatarLink), data: nil)
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
                     
