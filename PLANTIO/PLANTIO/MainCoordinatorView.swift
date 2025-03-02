@@ -35,6 +35,10 @@ struct MainCoordinatorView: View {
             }
         }
     }
+    
+    @AppStorage("isFeedEnabled") var isFeedEnabled: Bool = false
+    @AppStorage("isProfileEnabled") var isProfileEnabled: Bool = false
+    @AppStorage("username") var isAuthEnabled: Bool = false
 
     @State private var selectedTab = Tab.plants
 
@@ -44,8 +48,6 @@ struct MainCoordinatorView: View {
     private let feedCoordinator: FeedCoordinator
     private let classifierCoordinator: ClassifierCoordinator
     private let plantsCoordinator: PlantCoordinator
-
-    // TODO: add Settings coordinator
 
     init(factory: ScreenFactory, showAuthSceneHandler: @escaping () -> Void) {
         self.factory = factory
@@ -58,11 +60,14 @@ struct MainCoordinatorView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            FeedCoordinatorView(feedCoordinator, factory: factory)
-                .tabItem {
-                    Label(Tab.feed.title, systemImage: Tab.feed.icon)
-                }
-                .tag(Tab.feed)
+            
+            if isFeedEnabled {
+                FeedCoordinatorView(feedCoordinator, factory: factory)
+                    .tabItem {
+                        Label(Tab.feed.title, systemImage: Tab.feed.icon)
+                    }
+                    .tag(Tab.feed)
+            }
             
             PlantCoordinatorView(plantsCoordinator, factory: factory)
                 .tabItem {
@@ -76,17 +81,32 @@ struct MainCoordinatorView: View {
                 }
                 .tag(Tab.identifier)
             
-            ProfileCoordinatorView(profileCoordinator, factory: factory)
-                .tabItem {
-                    Label(Tab.profile.title, systemImage: Tab.profile.icon)
-                }
-                .tag(Tab.profile)
+            if isProfileEnabled {
+                ProfileCoordinatorView(profileCoordinator, factory: factory)
+                    .tabItem {
+                        Label(Tab.profile.title, systemImage: Tab.profile.icon)
+                    }
+                    .tag(Tab.profile)
+            }
             
-            Text("Settings")
-                .tabItem {
-                    Label(Tab.settings.title, systemImage: Tab.settings.icon)
-                }
-                .tag(Tab.settings)
+            VStack {
+                Button {
+                    isFeedEnabled.toggle()
+                } label: {
+                    Text("Feed")
+                }.buttonStyle(PUI.BaseButtonStyle(isProminent: true, color: isFeedEnabled ? .pui.accent : .gray))
+                
+                Button {
+                    isProfileEnabled.toggle()
+                } label: {
+                    Text("Profile")
+                }.buttonStyle(PUI.BaseButtonStyle(isProminent: true, color: isProfileEnabled ? .pui.accent : .gray))
+            }
+            .padding(.horizontal, PUI.Spacing.large)
+            .tabItem {
+                Label(Tab.settings.title, systemImage: Tab.settings.icon)
+            }
+            .tag(Tab.settings)
         }
         .onAppear {
             setupTabBar()
