@@ -6,20 +6,8 @@ import FeedModule
 import PlantClassifierModule
 import SwiftUI
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
-    ) -> Bool {
-        FirebaseSetup.configure()
-        return true
-    }
-}
-
 @main
 struct PLANTIOApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
     private let serviceLocator: ServiceLocator
     
     init() {
