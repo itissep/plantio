@@ -56,7 +56,7 @@ public struct PlantCollectionView: View {
                                     }
                                 }
                                 if viewModel.state.selectedPlant?.id ?? "" == plant.id {
-                                    Text("selected")
+                                    Text(plant.name)
                                         .font(PUI.Font.caption)
                                         .padding(.all, PUI.Spacing.small)
                                         .background {
@@ -72,7 +72,8 @@ public struct PlantCollectionView: View {
                         }
                     }
                 }
-                .padding(.bottom, PUI.Spacing.large)
+                .padding(.vertical, PUI.Spacing.large)
+                
                 if viewModel.state.selectedPlant == nil {
                     
                     VStack(spacing: PUI.Spacing.large) {
@@ -86,24 +87,28 @@ public struct PlantCollectionView: View {
                         Spacer()
                     }
                 } else {
+                    
                     VStack(alignment: .leading, spacing: PUI.Spacing.large) {
-                        Button {
-                            viewModel.handle(.onDeletePlantTapped)
-                        } label: {
-                            Text("delete this plant")
-                        }.buttonStyle(PUI.BaseButtonStyle(isProminent: true))
                         
-                        ForEach(viewModel.state.plantEvents, id: \.title) { eventModel in
-                            EventTimetableView(viewModel: eventModel)
-                                .padding(.bottom, PUI.Spacing.large)
+                        Text("description")
+                            .foregroundStyle(Color.pui.textPrimary)
+                            .font(PUI.Font.title)
+                        
+                        Text(viewModel.state.selectedPlant?.description ?? "no description")
+                            .foregroundStyle(Color.pui.textSecondary)
+                            .font(PUI.Font.text)
+                        
+                        EventTimetableView(viewModel: viewModel) {
+                            viewModel.handle(.onAddEventTapped)
                         }
+                        .padding(.bottom, PUI.Spacing.large)
                         
-                        Text("photos")
+                        Text("progress")
                             .foregroundStyle(Color.pui.textPrimary)
                             .font(PUI.Font.title)
                         
                         PhotoGridView(
-                            urlStrings: viewModel.state.plantPhotos,
+                            urlStrings: viewModel.state.plantPhotos.sorted(by: { $0.createdAt < $1.createdAt}),
                             lastItemIcon: Image(systemName: "plus")
                         ) { data in
 //                            popoverPhotoData = data
@@ -143,7 +148,7 @@ public struct PlantCollectionView: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 PUI.IconButton(Image(systemName: "plus.square.fill"), action: {
-                    print("hello")
+                    viewModel.handle(.onAddPlantTapped)
                 })
             }
         }

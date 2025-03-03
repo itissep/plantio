@@ -1,15 +1,11 @@
 import Foundation
 import Core
 import Models
-import PUI // TODO: remove this later
 
 struct PlantCollectionViewState: Equatable {
-    // TODO: add frinds
-    
     var plants: [Plant] = []
     var selectedPlant: Plant? = nil
-    var plantEvents: [EventTimetableViewModel] = []
-    var plantPhotos: [String] = []
+    var plantEvents: [WeekModel] = []
     var plantPhotos: [PhotoModel] = []
     
     // Service
@@ -23,6 +19,7 @@ enum PlantCollectionViewEvent {
     case onAlertPresented(Bool)
     
     case onAddPlantTapped
+    case onAddEventTapped
     case onAddPhoto(Data?)
     case onDeletePlantTapped
     
@@ -58,14 +55,15 @@ final class PlantCollectionViewModel: ViewModel {
             addPhoto(imageData)
         case .onDeletePlantTapped:
             deleteSelectedPlant()
+            state.selectedPlant = nil
         case .onAddPlantTapped:
             coordinator.showCreatePlantScene()
         case .onPlantSelectWithId(let selectedId):
-            state.isLoading = true
             state.selectedPlant = state.plants.first(where: { $0.id == selectedId})
             updateEvents(for: selectedId)
             updatePhotos(for: selectedId)
-            state.isLoading = false
+        case .onAddEventTapped:
+            createNewEvent()
         }
     }
     
@@ -80,7 +78,6 @@ final class PlantCollectionViewModel: ViewModel {
                 self?.updatePhotos(for: plantId)
             }
         }
-        
     }
     
     private func deleteSelectedPlant() {
@@ -104,12 +101,13 @@ final class PlantCollectionViewModel: ViewModel {
     }
     
     private func updateEvents(for plantId: String) {
+        state.plantEvents = []
         plantService.getEvents(for: plantId) { [weak self] events, error in
             guard let self else {
                 return
             }
-            
-            let weeks: [WeekModel] = splitDatesIntoWeeks(dates: generateDates().reversed()).map { week in
+
+            self.state.plantEvents = self.splitDatesIntoWeeks(dates: self.generateDates().reversed()).map { week in
                 WeekModel(days: week.map { date in
                     DayModel(
                         date: date,
@@ -117,15 +115,6 @@ final class PlantCollectionViewModel: ViewModel {
                     )
                 })
             }
-            state.plantEvents = [.init(
-                color: .pui.accent,
-                title: "watering",
-                weeks: weeks,
-                actionTitle: "water me",
-                onActionTap: { [weak self] in
-                    self?.createNewEvent()
-                }
-            )]
         }
     }
     
@@ -137,11 +126,17 @@ final class PlantCollectionViewModel: ViewModel {
     
     private func createNewEvent() {
         if let plant = state.selectedPlant {
-            let newEvent = Models.Event(id: UUID().uuidString, note: "", plantId: plant.id, createdAt: .now)
+            let newEvent = Models.Event(
+                id: UUID().uuidString,
+                note: "",
+                plantId: plant.id,
+                createdAt: .now
+            )
             plantService.newEvent(newEvent) { [weak self] error in
                 if let error {
                     self?.state.errorMessage = error.localizedDescription
                 }
+                self?.updateEvents(for: plant.id)
             }
         }
     }
